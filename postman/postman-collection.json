@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "rahul_s_application52",
-    "_postman_id": "ac52a1c5-066c-4cb5-a7dd-582fdc970c82",
+    "_postman_id": "2da6b75d-1e06-4787-a97b-8028892a09a6",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -9,6 +9,600 @@
       "name": "admin",
       "description": "admin APIs",
       "item": [
+        {
+          "name": "Event",
+          "description": "Event Model APIs",
+          "item": [
+            {
+              "name": "getEvent",
+              "request": {
+                "url": "{{url}}/admin/event/:id",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "getEvent_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/:id"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dixie Cassin\",\n    \"description\": \"Hampshire\",\n    \"address\": {\n      \"line1\": \"wireless\",\n      \"line2\": \"Handcrafted\",\n      \"city\": \"user-facing\",\n      \"country\": \"line\",\n      \"state\": \"Chair\",\n      \"pincode\": \"withdrawal\",\n      \"lat\": 945,\n      \"lng\": 488\n    },\n    \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n    \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Dominick Sipes\",\n        \"image\": \"Soft\",\n        \"email\": \"Aniya_Lehner@gmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Loretta Schuppe\",\n      \"image\": \"Product\",\n      \"email\": \"Brianne.Runte30@hotmail.com\",\n      \"url\": \"PNG\"\n    },\n    \"image\": \"Administrator\",\n    \"id\": \"6232c6dcaf4c8e8f514717c3\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-23T03:57:05.409Z\",\n    \"updatedAt\": \"2023-01-23T06:52:05.165Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addEvent",
+              "request": {
+                "url": "{{url}}/admin/event/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Dixie Cassin\",\n  \"description\": \"Hampshire\",\n  \"address\": {\n    \"line1\": \"wireless\",\n    \"line2\": \"Handcrafted\",\n    \"city\": \"user-facing\",\n    \"country\": \"line\",\n    \"state\": \"Chair\",\n    \"pincode\": \"withdrawal\",\n    \"lat\": 945,\n    \"lng\": 488\n  },\n  \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n  \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n  \"speakers\": [\n    {\n      \"_id\": false,\n      \"name\": \"Dominick Sipes\",\n      \"image\": \"Soft\",\n      \"email\": \"Aniya_Lehner@gmail.com\"\n    }\n  ],\n  \"organizer\": {\n    \"name\": \"Loretta Schuppe\",\n    \"image\": \"Product\",\n    \"email\": \"Brianne.Runte30@hotmail.com\",\n    \"url\": \"PNG\"\n  },\n  \"image\": \"Administrator\"\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "addEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/create"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dixie Cassin\",\n    \"description\": \"Hampshire\",\n    \"address\": {\n      \"line1\": \"wireless\",\n      \"line2\": \"Handcrafted\",\n      \"city\": \"user-facing\",\n      \"country\": \"line\",\n      \"state\": \"Chair\",\n      \"pincode\": \"withdrawal\",\n      \"lat\": 945,\n      \"lng\": 488\n    },\n    \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n    \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Dominick Sipes\",\n        \"image\": \"Soft\",\n        \"email\": \"Aniya_Lehner@gmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Loretta Schuppe\",\n      \"image\": \"Product\",\n      \"email\": \"Brianne.Runte30@hotmail.com\",\n      \"url\": \"PNG\"\n    },\n    \"image\": \"Administrator\",\n    \"id\": \"6232c6dcaf4c8e8f514717bd\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-23T03:57:05.409Z\",\n    \"updatedAt\": \"2023-01-23T06:52:05.165Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllEvent",
+              "request": {
+                "url": "{{url}}/admin/event/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "findAllEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/list"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"name\": \"Dixie Cassin\",\n        \"description\": \"Hampshire\",\n        \"address\": {\n          \"line1\": \"wireless\",\n          \"line2\": \"Handcrafted\",\n          \"city\": \"user-facing\",\n          \"country\": \"line\",\n          \"state\": \"Chair\",\n          \"pincode\": \"withdrawal\",\n          \"lat\": 945,\n          \"lng\": 488\n        },\n        \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n        \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n        \"speakers\": [\n          {\n            \"_id\": false,\n            \"name\": \"Dominick Sipes\",\n            \"image\": \"Soft\",\n            \"email\": \"Aniya_Lehner@gmail.com\"\n          }\n        ],\n        \"organizer\": {\n          \"name\": \"Loretta Schuppe\",\n          \"image\": \"Product\",\n          \"email\": \"Brianne.Runte30@hotmail.com\",\n          \"url\": \"PNG\"\n        },\n        \"image\": \"Administrator\",\n        \"id\": \"6232c6dcaf4c8e8f514717be\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-11-23T03:57:05.409Z\",\n        \"updatedAt\": \"2023-01-23T06:52:05.165Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getEventCount",
+              "request": {
+                "url": "{{url}}/admin/event/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "getEventCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/count"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkEvent",
+              "request": {
+                "url": "{{url}}/admin/event/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Dixie Cassin\",\n      \"description\": \"Hampshire\",\n      \"address\": {\n        \"line1\": \"wireless\",\n        \"line2\": \"Handcrafted\",\n        \"city\": \"user-facing\",\n        \"country\": \"line\",\n        \"state\": \"Chair\",\n        \"pincode\": \"withdrawal\",\n        \"lat\": 945,\n        \"lng\": 488\n      },\n      \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n      \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Dominick Sipes\",\n          \"image\": \"Soft\",\n          \"email\": \"Aniya_Lehner@gmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Loretta Schuppe\",\n        \"image\": \"Product\",\n        \"email\": \"Brianne.Runte30@hotmail.com\",\n        \"url\": \"PNG\"\n      },\n      \"image\": \"Administrator\"\n    }\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "insertBulkEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/addBulk"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Dixie Cassin\",\n      \"description\": \"Hampshire\",\n      \"address\": {\n        \"line1\": \"wireless\",\n        \"line2\": \"Handcrafted\",\n        \"city\": \"user-facing\",\n        \"country\": \"line\",\n        \"state\": \"Chair\",\n        \"pincode\": \"withdrawal\",\n        \"lat\": 945,\n        \"lng\": 488\n      },\n      \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n      \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Dominick Sipes\",\n          \"image\": \"Soft\",\n          \"email\": \"Aniya_Lehner@gmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Loretta Schuppe\",\n        \"image\": \"Product\",\n        \"email\": \"Brianne.Runte30@hotmail.com\",\n        \"url\": \"PNG\"\n      },\n      \"image\": \"Administrator\",\n      \"id\": \"6232c6dcaf4c8e8f514717bf\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-23T03:57:05.409Z\",\n      \"updatedAt\": \"2023-01-23T06:52:05.165Z\"\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteManyEvent",
+              "request": {
+                "url": "{{url}}/admin/event/deleteMany",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true,\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "deleteManyEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/deleteMany"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"ok\": 1,\n    \"deletedCount\": 2\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyEvent",
+              "request": {
+                "url": "{{url}}/admin/event/softDeleteMany",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/softDeleteMany"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkEvent",
+              "request": {
+                "url": "{{url}}/admin/event/updateBulk",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "updateBulkEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/updateBulk"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Dixie Cassin\",\n      \"description\": \"Hampshire\",\n      \"address\": {\n        \"line1\": \"wireless\",\n        \"line2\": \"Handcrafted\",\n        \"city\": \"user-facing\",\n        \"country\": \"line\",\n        \"state\": \"Chair\",\n        \"pincode\": \"withdrawal\",\n        \"lat\": 945,\n        \"lng\": 488\n      },\n      \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n      \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Dominick Sipes\",\n          \"image\": \"Soft\",\n          \"email\": \"Aniya_Lehner@gmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Loretta Schuppe\",\n        \"image\": \"Product\",\n        \"email\": \"Brianne.Runte30@hotmail.com\",\n        \"url\": \"PNG\"\n      },\n      \"image\": \"Administrator\",\n      \"id\": \"6232c6dcaf4c8e8f514717c0\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-23T03:57:05.409Z\",\n      \"updatedAt\": \"2023-01-23T06:52:05.165Z\"\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteEvent",
+              "request": {
+                "url": "{{url}}/admin/event/softDelete/:id",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "softDeleteEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/softDelete/:id"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateEvent",
+              "request": {
+                "url": "{{url}}/admin/event/partial-update/:id",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "partialupdateEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/partial-update/:id"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dixie Cassin\",\n    \"description\": \"Hampshire\",\n    \"address\": {\n      \"line1\": \"wireless\",\n      \"line2\": \"Handcrafted\",\n      \"city\": \"user-facing\",\n      \"country\": \"line\",\n      \"state\": \"Chair\",\n      \"pincode\": \"withdrawal\",\n      \"lat\": 945,\n      \"lng\": 488\n    },\n    \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n    \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Dominick Sipes\",\n        \"image\": \"Soft\",\n        \"email\": \"Aniya_Lehner@gmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Loretta Schuppe\",\n      \"image\": \"Product\",\n      \"email\": \"Brianne.Runte30@hotmail.com\",\n      \"url\": \"PNG\"\n    },\n    \"image\": \"Administrator\",\n    \"id\": \"6232c6dcaf4c8e8f514717c1\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-23T03:57:05.409Z\",\n    \"updatedAt\": \"2023-01-23T06:52:05.165Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateEvent",
+              "request": {
+                "url": "{{url}}/admin/event/update/:id",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Dixie Cassin\",\n  \"description\": \"Hampshire\",\n  \"address\": {\n    \"line1\": \"wireless\",\n    \"line2\": \"Handcrafted\",\n    \"city\": \"user-facing\",\n    \"country\": \"line\",\n    \"state\": \"Chair\",\n    \"pincode\": \"withdrawal\",\n    \"lat\": 945,\n    \"lng\": 488\n  },\n  \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n  \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n  \"speakers\": [\n    {\n      \"_id\": false,\n      \"name\": \"Dominick Sipes\",\n      \"image\": \"Soft\",\n      \"email\": \"Aniya_Lehner@gmail.com\"\n    }\n  ],\n  \"organizer\": {\n    \"name\": \"Loretta Schuppe\",\n    \"image\": \"Product\",\n    \"email\": \"Brianne.Runte30@hotmail.com\",\n    \"url\": \"PNG\"\n  },\n  \"image\": \"Administrator\"\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "updateEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/update/:id"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dixie Cassin\",\n    \"description\": \"Hampshire\",\n    \"address\": {\n      \"line1\": \"wireless\",\n      \"line2\": \"Handcrafted\",\n      \"city\": \"user-facing\",\n      \"country\": \"line\",\n      \"state\": \"Chair\",\n      \"pincode\": \"withdrawal\",\n      \"lat\": 945,\n      \"lng\": 488\n    },\n    \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n    \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Dominick Sipes\",\n        \"image\": \"Soft\",\n        \"email\": \"Aniya_Lehner@gmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Loretta Schuppe\",\n      \"image\": \"Product\",\n      \"email\": \"Brianne.Runte30@hotmail.com\",\n      \"url\": \"PNG\"\n    },\n    \"image\": \"Administrator\",\n    \"id\": \"6232c6dcaf4c8e8f514717c2\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-23T03:57:05.409Z\",\n    \"updatedAt\": \"2023-01-23T06:52:05.165Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteEvent",
+              "request": {
+                "url": "{{url}}/admin/event/delete/:id",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "deleteEvent_response",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/delete/:id"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"ok\": 1,\n    \"deletedCount\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
         {
           "name": "Blog",
           "description": "Blog Model APIs",
@@ -50,7 +644,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Product\",\n    \"alternativeHeadline\": \"Corporate\",\n    \"image\": \"Executive\",\n    \"publishDate\": \"embrace\",\n    \"author\": {\n      \"name\": \"Kristen Haley\",\n      \"image\": \"Triple-buffered\",\n      \"email\": \"Faye.OConnell77@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Cesar Prosacco\",\n      \"url\": \"HDD\",\n      \"logo\": \"Fresh\"\n    },\n    \"articleSection\": \"Agent\",\n    \"articleBody\": \"communities\",\n    \"description\": \"Connecticut\",\n    \"slug\": \"quantify\",\n    \"url\": \"withdrawal\",\n    \"isDraft\": true,\n    \"id\": \"6232c42c45b11e7ada9c3104\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-03-03T19:27:04.863Z\",\n    \"updatedAt\": \"2022-11-04T02:25:07.739Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Chair\",\n    \"alternativeHeadline\": \"program\",\n    \"image\": \"Vanuatu\",\n    \"publishDate\": \"National\",\n    \"author\": {\n      \"name\": \"Juana Yundt\",\n      \"image\": \"Frozen\",\n      \"email\": \"Ocie.Funk@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Raymond Jacobi\",\n      \"url\": \"Specialist\",\n      \"logo\": \"Cheese\"\n    },\n    \"articleSection\": \"Supervisor\",\n    \"articleBody\": \"envisioneer\",\n    \"description\": \"Analyst\",\n    \"slug\": \"Graphic\",\n    \"url\": \"Profound\",\n    \"isDraft\": true,\n    \"id\": \"6232c6dcaf4c8e8f514717d2\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-07-31T18:39:00.177Z\",\n    \"updatedAt\": \"2022-10-11T08:37:41.644Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -76,7 +670,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"title\": \"Product\",\n  \"alternativeHeadline\": \"Corporate\",\n  \"image\": \"Executive\",\n  \"publishDate\": \"embrace\",\n  \"author\": {\n    \"name\": \"Kristen Haley\",\n    \"image\": \"Triple-buffered\",\n    \"email\": \"Faye.OConnell77@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Cesar Prosacco\",\n    \"url\": \"HDD\",\n    \"logo\": \"Fresh\"\n  },\n  \"articleSection\": \"Agent\",\n  \"articleBody\": \"communities\",\n  \"description\": \"Connecticut\",\n  \"slug\": \"quantify\",\n  \"url\": \"withdrawal\",\n  \"isDraft\": true\n}"
+                  "raw": "{\n  \"title\": \"Chair\",\n  \"alternativeHeadline\": \"program\",\n  \"image\": \"Vanuatu\",\n  \"publishDate\": \"National\",\n  \"author\": {\n    \"name\": \"Juana Yundt\",\n    \"image\": \"Frozen\",\n    \"email\": \"Ocie.Funk@yahoo.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Raymond Jacobi\",\n    \"url\": \"Specialist\",\n    \"logo\": \"Cheese\"\n  },\n  \"articleSection\": \"Supervisor\",\n  \"articleBody\": \"envisioneer\",\n  \"description\": \"Analyst\",\n  \"slug\": \"Graphic\",\n  \"url\": \"Profound\",\n  \"isDraft\": true\n}"
                 },
                 "description": "",
                 "auth": {
@@ -99,7 +693,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Product\",\n    \"alternativeHeadline\": \"Corporate\",\n    \"image\": \"Executive\",\n    \"publishDate\": \"embrace\",\n    \"author\": {\n      \"name\": \"Kristen Haley\",\n      \"image\": \"Triple-buffered\",\n      \"email\": \"Faye.OConnell77@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Cesar Prosacco\",\n      \"url\": \"HDD\",\n      \"logo\": \"Fresh\"\n    },\n    \"articleSection\": \"Agent\",\n    \"articleBody\": \"communities\",\n    \"description\": \"Connecticut\",\n    \"slug\": \"quantify\",\n    \"url\": \"withdrawal\",\n    \"isDraft\": true,\n    \"id\": \"6232c42c45b11e7ada9c30fe\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-03-03T19:27:04.863Z\",\n    \"updatedAt\": \"2022-11-04T02:25:07.739Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Chair\",\n    \"alternativeHeadline\": \"program\",\n    \"image\": \"Vanuatu\",\n    \"publishDate\": \"National\",\n    \"author\": {\n      \"name\": \"Juana Yundt\",\n      \"image\": \"Frozen\",\n      \"email\": \"Ocie.Funk@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Raymond Jacobi\",\n      \"url\": \"Specialist\",\n      \"logo\": \"Cheese\"\n    },\n    \"articleSection\": \"Supervisor\",\n    \"articleBody\": \"envisioneer\",\n    \"description\": \"Analyst\",\n    \"slug\": \"Graphic\",\n    \"url\": \"Profound\",\n    \"isDraft\": true,\n    \"id\": \"6232c6dcaf4c8e8f514717cc\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-07-31T18:39:00.177Z\",\n    \"updatedAt\": \"2022-10-11T08:37:41.644Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -148,7 +742,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"Product\",\n        \"alternativeHeadline\": \"Corporate\",\n        \"image\": \"Executive\",\n        \"publishDate\": \"embrace\",\n        \"author\": {\n          \"name\": \"Kristen Haley\",\n          \"image\": \"Triple-buffered\",\n          \"email\": \"Faye.OConnell77@gmail.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Cesar Prosacco\",\n          \"url\": \"HDD\",\n          \"logo\": \"Fresh\"\n        },\n        \"articleSection\": \"Agent\",\n        \"articleBody\": \"communities\",\n        \"description\": \"Connecticut\",\n        \"slug\": \"quantify\",\n        \"url\": \"withdrawal\",\n        \"isDraft\": true,\n        \"id\": \"6232c42c45b11e7ada9c30ff\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2023-03-03T19:27:04.863Z\",\n        \"updatedAt\": \"2022-11-04T02:25:07.739Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"Chair\",\n        \"alternativeHeadline\": \"program\",\n        \"image\": \"Vanuatu\",\n        \"publishDate\": \"National\",\n        \"author\": {\n          \"name\": \"Juana Yundt\",\n          \"image\": \"Frozen\",\n          \"email\": \"Ocie.Funk@yahoo.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Raymond Jacobi\",\n          \"url\": \"Specialist\",\n          \"logo\": \"Cheese\"\n        },\n        \"articleSection\": \"Supervisor\",\n        \"articleBody\": \"envisioneer\",\n        \"description\": \"Analyst\",\n        \"slug\": \"Graphic\",\n        \"url\": \"Profound\",\n        \"isDraft\": true,\n        \"id\": \"6232c6dcaf4c8e8f514717cd\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-07-31T18:39:00.177Z\",\n        \"updatedAt\": \"2022-10-11T08:37:41.644Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -223,7 +817,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"Product\",\n      \"alternativeHeadline\": \"Corporate\",\n      \"image\": \"Executive\",\n      \"publishDate\": \"embrace\",\n      \"author\": {\n        \"name\": \"Kristen Haley\",\n        \"image\": \"Triple-buffered\",\n        \"email\": \"Faye.OConnell77@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Cesar Prosacco\",\n        \"url\": \"HDD\",\n        \"logo\": \"Fresh\"\n      },\n      \"articleSection\": \"Agent\",\n      \"articleBody\": \"communities\",\n      \"description\": \"Connecticut\",\n      \"slug\": \"quantify\",\n      \"url\": \"withdrawal\",\n      \"isDraft\": true\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"Chair\",\n      \"alternativeHeadline\": \"program\",\n      \"image\": \"Vanuatu\",\n      \"publishDate\": \"National\",\n      \"author\": {\n        \"name\": \"Juana Yundt\",\n        \"image\": \"Frozen\",\n        \"email\": \"Ocie.Funk@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Raymond Jacobi\",\n        \"url\": \"Specialist\",\n        \"logo\": \"Cheese\"\n      },\n      \"articleSection\": \"Supervisor\",\n      \"articleBody\": \"envisioneer\",\n      \"description\": \"Analyst\",\n      \"slug\": \"Graphic\",\n      \"url\": \"Profound\",\n      \"isDraft\": true\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -246,7 +840,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Product\",\n      \"alternativeHeadline\": \"Corporate\",\n      \"image\": \"Executive\",\n      \"publishDate\": \"embrace\",\n      \"author\": {\n        \"name\": \"Kristen Haley\",\n        \"image\": \"Triple-buffered\",\n        \"email\": \"Faye.OConnell77@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Cesar Prosacco\",\n        \"url\": \"HDD\",\n        \"logo\": \"Fresh\"\n      },\n      \"articleSection\": \"Agent\",\n      \"articleBody\": \"communities\",\n      \"description\": \"Connecticut\",\n      \"slug\": \"quantify\",\n      \"url\": \"withdrawal\",\n      \"isDraft\": true,\n      \"id\": \"6232c42c45b11e7ada9c3100\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-03-03T19:27:04.863Z\",\n      \"updatedAt\": \"2022-11-04T02:25:07.739Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Chair\",\n      \"alternativeHeadline\": \"program\",\n      \"image\": \"Vanuatu\",\n      \"publishDate\": \"National\",\n      \"author\": {\n        \"name\": \"Juana Yundt\",\n        \"image\": \"Frozen\",\n        \"email\": \"Ocie.Funk@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Raymond Jacobi\",\n        \"url\": \"Specialist\",\n        \"logo\": \"Cheese\"\n      },\n      \"articleSection\": \"Supervisor\",\n      \"articleBody\": \"envisioneer\",\n      \"description\": \"Analyst\",\n      \"slug\": \"Graphic\",\n      \"url\": \"Profound\",\n      \"isDraft\": true,\n      \"id\": \"6232c6dcaf4c8e8f514717ce\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-07-31T18:39:00.177Z\",\n      \"updatedAt\": \"2022-10-11T08:37:41.644Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -393,7 +987,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Product\",\n      \"alternativeHeadline\": \"Corporate\",\n      \"image\": \"Executive\",\n      \"publishDate\": \"embrace\",\n      \"author\": {\n        \"name\": \"Kristen Haley\",\n        \"image\": \"Triple-buffered\",\n        \"email\": \"Faye.OConnell77@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Cesar Prosacco\",\n        \"url\": \"HDD\",\n        \"logo\": \"Fresh\"\n      },\n      \"articleSection\": \"Agent\",\n      \"articleBody\": \"communities\",\n      \"description\": \"Connecticut\",\n      \"slug\": \"quantify\",\n      \"url\": \"withdrawal\",\n      \"isDraft\": true,\n      \"id\": \"6232c42c45b11e7ada9c3101\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-03-03T19:27:04.863Z\",\n      \"updatedAt\": \"2022-11-04T02:25:07.739Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Chair\",\n      \"alternativeHeadline\": \"program\",\n      \"image\": \"Vanuatu\",\n      \"publishDate\": \"National\",\n      \"author\": {\n        \"name\": \"Juana Yundt\",\n        \"image\": \"Frozen\",\n        \"email\": \"Ocie.Funk@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Raymond Jacobi\",\n        \"url\": \"Specialist\",\n        \"logo\": \"Cheese\"\n      },\n      \"articleSection\": \"Supervisor\",\n      \"articleBody\": \"envisioneer\",\n      \"description\": \"Analyst\",\n      \"slug\": \"Graphic\",\n      \"url\": \"Profound\",\n      \"isDraft\": true,\n      \"id\": \"6232c6dcaf4c8e8f514717cf\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-07-31T18:39:00.177Z\",\n      \"updatedAt\": \"2022-10-11T08:37:41.644Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -491,7 +1085,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Product\",\n    \"alternativeHeadline\": \"Corporate\",\n    \"image\": \"Executive\",\n    \"publishDate\": \"embrace\",\n    \"author\": {\n      \"name\": \"Kristen Haley\",\n      \"image\": \"Triple-buffered\",\n      \"email\": \"Faye.OConnell77@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Cesar Prosacco\",\n      \"url\": \"HDD\",\n      \"logo\": \"Fresh\"\n    },\n    \"articleSection\": \"Agent\",\n    \"articleBody\": \"communities\",\n    \"description\": \"Connecticut\",\n    \"slug\": \"quantify\",\n    \"url\": \"withdrawal\",\n    \"isDraft\": true,\n    \"id\": \"6232c42c45b11e7ada9c3102\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-03-03T19:27:04.863Z\",\n    \"updatedAt\": \"2022-11-04T02:25:07.739Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Chair\",\n    \"alternativeHeadline\": \"program\",\n    \"image\": \"Vanuatu\",\n    \"publishDate\": \"National\",\n    \"author\": {\n      \"name\": \"Juana Yundt\",\n      \"image\": \"Frozen\",\n      \"email\": \"Ocie.Funk@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Raymond Jacobi\",\n      \"url\": \"Specialist\",\n      \"logo\": \"Cheese\"\n    },\n    \"articleSection\": \"Supervisor\",\n    \"articleBody\": \"envisioneer\",\n    \"description\": \"Analyst\",\n    \"slug\": \"Graphic\",\n    \"url\": \"Profound\",\n    \"isDraft\": true,\n    \"id\": \"6232c6dcaf4c8e8f514717d0\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-07-31T18:39:00.177Z\",\n    \"updatedAt\": \"2022-10-11T08:37:41.644Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -517,7 +1111,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"title\": \"Product\",\n  \"alternativeHeadline\": \"Corporate\",\n  \"image\": \"Executive\",\n  \"publishDate\": \"embrace\",\n  \"author\": {\n    \"name\": \"Kristen Haley\",\n    \"image\": \"Triple-buffered\",\n    \"email\": \"Faye.OConnell77@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Cesar Prosacco\",\n    \"url\": \"HDD\",\n    \"logo\": \"Fresh\"\n  },\n  \"articleSection\": \"Agent\",\n  \"articleBody\": \"communities\",\n  \"description\": \"Connecticut\",\n  \"slug\": \"quantify\",\n  \"url\": \"withdrawal\",\n  \"isDraft\": true\n}"
+                  "raw": "{\n  \"title\": \"Chair\",\n  \"alternativeHeadline\": \"program\",\n  \"image\": \"Vanuatu\",\n  \"publishDate\": \"National\",\n  \"author\": {\n    \"name\": \"Juana Yundt\",\n    \"image\": \"Frozen\",\n    \"email\": \"Ocie.Funk@yahoo.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Raymond Jacobi\",\n    \"url\": \"Specialist\",\n    \"logo\": \"Cheese\"\n  },\n  \"articleSection\": \"Supervisor\",\n  \"articleBody\": \"envisioneer\",\n  \"description\": \"Analyst\",\n  \"slug\": \"Graphic\",\n  \"url\": \"Profound\",\n  \"isDraft\": true\n}"
                 },
                 "description": "",
                 "auth": {
@@ -540,7 +1134,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Product\",\n    \"alternativeHeadline\": \"Corporate\",\n    \"image\": \"Executive\",\n    \"publishDate\": \"embrace\",\n    \"author\": {\n      \"name\": \"Kristen Haley\",\n      \"image\": \"Triple-buffered\",\n      \"email\": \"Faye.OConnell77@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Cesar Prosacco\",\n      \"url\": \"HDD\",\n      \"logo\": \"Fresh\"\n    },\n    \"articleSection\": \"Agent\",\n    \"articleBody\": \"communities\",\n    \"description\": \"Connecticut\",\n    \"slug\": \"quantify\",\n    \"url\": \"withdrawal\",\n    \"isDraft\": true,\n    \"id\": \"6232c42c45b11e7ada9c3103\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-03-03T19:27:04.863Z\",\n    \"updatedAt\": \"2022-11-04T02:25:07.739Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Chair\",\n    \"alternativeHeadline\": \"program\",\n    \"image\": \"Vanuatu\",\n    \"publishDate\": \"National\",\n    \"author\": {\n      \"name\": \"Juana Yundt\",\n      \"image\": \"Frozen\",\n      \"email\": \"Ocie.Funk@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Raymond Jacobi\",\n      \"url\": \"Specialist\",\n      \"logo\": \"Cheese\"\n    },\n    \"articleSection\": \"Supervisor\",\n    \"articleBody\": \"envisioneer\",\n    \"description\": \"Analyst\",\n    \"slug\": \"Graphic\",\n    \"url\": \"Profound\",\n    \"isDraft\": true,\n    \"id\": \"6232c6dcaf4c8e8f514717d1\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-07-31T18:39:00.177Z\",\n    \"updatedAt\": \"2022-10-11T08:37:41.644Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -644,7 +1238,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"userType\": 1,\n    \"id\": \"6232c42c45b11e7ada9c3113\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-03-24T17:16:24.166Z\",\n    \"updatedAt\": \"2023-02-10T21:34:16.627Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"userType\": 1,\n    \"id\": \"6232c6dcaf4c8e8f514717e1\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-20T00:54:51.700Z\",\n    \"updatedAt\": \"2022-09-02T21:03:06.616Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -693,7 +1287,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Nedra.Mayert48\",\n      \"email\": \"Nettie_Krajcik74@gmail.com\",\n      \"name\": \"Leah Rath\",\n      \"mobileNo\": \"1-518-542-3802\",\n      \"userType\": 1,\n      \"id\": \"6232c42c45b11e7ada9c3115\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-03-24T17:16:24.166Z\",\n      \"updatedAt\": \"2023-02-10T21:34:16.627Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Mona_Smith\",\n      \"email\": \"Kaleb67@yahoo.com\",\n      \"name\": \"Lillie Schuppe\",\n      \"mobileNo\": \"1-892-333-1668\",\n      \"userType\": 1,\n      \"id\": \"6232c6dcaf4c8e8f514717e3\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-12-20T00:54:51.700Z\",\n      \"updatedAt\": \"2022-09-02T21:03:06.616Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -719,7 +1313,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Nedra.Mayert48\",\n  \"password\": \"Kalhv8D9M5mbyrx\",\n  \"email\": \"Nettie_Krajcik74@gmail.com\",\n  \"name\": \"Leah Rath\",\n  \"mobileNo\": \"1-518-542-3802\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Mona_Smith\",\n  \"password\": \"c5EXpg28YyXqRKb\",\n  \"email\": \"Kaleb67@yahoo.com\",\n  \"name\": \"Lillie Schuppe\",\n  \"mobileNo\": \"1-892-333-1668\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -742,7 +1336,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"userType\": 1,\n    \"id\": \"6232c42c45b11e7ada9c310d\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-03-24T17:16:24.166Z\",\n    \"updatedAt\": \"2023-02-10T21:34:16.627Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"userType\": 1,\n    \"id\": \"6232c6dcaf4c8e8f514717db\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-20T00:54:51.700Z\",\n    \"updatedAt\": \"2022-09-02T21:03:06.616Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -791,7 +1385,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Nedra.Mayert48\",\n        \"email\": \"Nettie_Krajcik74@gmail.com\",\n        \"name\": \"Leah Rath\",\n        \"mobileNo\": \"1-518-542-3802\",\n        \"userType\": 1,\n        \"id\": \"6232c42c45b11e7ada9c310e\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-03-24T17:16:24.166Z\",\n        \"updatedAt\": \"2023-02-10T21:34:16.627Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Mona_Smith\",\n        \"email\": \"Kaleb67@yahoo.com\",\n        \"name\": \"Lillie Schuppe\",\n        \"mobileNo\": \"1-892-333-1668\",\n        \"userType\": 1,\n        \"id\": \"6232c6dcaf4c8e8f514717dc\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-12-20T00:54:51.700Z\",\n        \"updatedAt\": \"2022-09-02T21:03:06.616Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -866,7 +1460,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Nedra.Mayert48\",\n      \"password\": \"Kalhv8D9M5mbyrx\",\n      \"email\": \"Nettie_Krajcik74@gmail.com\",\n      \"name\": \"Leah Rath\",\n      \"mobileNo\": \"1-518-542-3802\",\n      \"userType\": 1\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Mona_Smith\",\n      \"password\": \"c5EXpg28YyXqRKb\",\n      \"email\": \"Kaleb67@yahoo.com\",\n      \"name\": \"Lillie Schuppe\",\n      \"mobileNo\": \"1-892-333-1668\",\n      \"userType\": 1\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -889,7 +1483,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Nedra.Mayert48\",\n      \"email\": \"Nettie_Krajcik74@gmail.com\",\n      \"name\": \"Leah Rath\",\n      \"mobileNo\": \"1-518-542-3802\",\n      \"userType\": 1,\n      \"id\": \"6232c42c45b11e7ada9c310f\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-03-24T17:16:24.166Z\",\n      \"updatedAt\": \"2023-02-10T21:34:16.627Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Mona_Smith\",\n      \"email\": \"Kaleb67@yahoo.com\",\n      \"name\": \"Lillie Schuppe\",\n      \"mobileNo\": \"1-892-333-1668\",\n      \"userType\": 1,\n      \"id\": \"6232c6dcaf4c8e8f514717dd\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-12-20T00:54:51.700Z\",\n      \"updatedAt\": \"2022-09-02T21:03:06.616Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1036,7 +1630,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Nedra.Mayert48\",\n      \"email\": \"Nettie_Krajcik74@gmail.com\",\n      \"name\": \"Leah Rath\",\n      \"mobileNo\": \"1-518-542-3802\",\n      \"userType\": 1,\n      \"id\": \"6232c42c45b11e7ada9c3110\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-03-24T17:16:24.166Z\",\n      \"updatedAt\": \"2023-02-10T21:34:16.627Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Mona_Smith\",\n      \"email\": \"Kaleb67@yahoo.com\",\n      \"name\": \"Lillie Schuppe\",\n      \"mobileNo\": \"1-892-333-1668\",\n      \"userType\": 1,\n      \"id\": \"6232c6dcaf4c8e8f514717de\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-12-20T00:54:51.700Z\",\n      \"updatedAt\": \"2022-09-02T21:03:06.616Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1134,7 +1728,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"userType\": 1,\n    \"id\": \"6232c42c45b11e7ada9c3111\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-03-24T17:16:24.166Z\",\n    \"updatedAt\": \"2023-02-10T21:34:16.627Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"userType\": 1,\n    \"id\": \"6232c6dcaf4c8e8f514717df\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-20T00:54:51.700Z\",\n    \"updatedAt\": \"2022-09-02T21:03:06.616Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1160,7 +1754,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Nedra.Mayert48\",\n  \"password\": \"Kalhv8D9M5mbyrx\",\n  \"email\": \"Nettie_Krajcik74@gmail.com\",\n  \"name\": \"Leah Rath\",\n  \"mobileNo\": \"1-518-542-3802\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Mona_Smith\",\n  \"password\": \"c5EXpg28YyXqRKb\",\n  \"email\": \"Kaleb67@yahoo.com\",\n  \"name\": \"Lillie Schuppe\",\n  \"mobileNo\": \"1-892-333-1668\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -1183,7 +1777,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"userType\": 1,\n    \"id\": \"6232c42c45b11e7ada9c3112\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-03-24T17:16:24.166Z\",\n    \"updatedAt\": \"2023-02-10T21:34:16.627Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"userType\": 1,\n    \"id\": \"6232c6dcaf4c8e8f514717e0\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-20T00:54:51.700Z\",\n    \"updatedAt\": \"2022-09-02T21:03:06.616Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1209,7 +1803,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Nedra.Mayert48\",\n  \"password\": \"Kalhv8D9M5mbyrx\",\n  \"email\": \"Nettie_Krajcik74@gmail.com\",\n  \"name\": \"Leah Rath\",\n  \"mobileNo\": \"1-518-542-3802\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Mona_Smith\",\n  \"password\": \"c5EXpg28YyXqRKb\",\n  \"email\": \"Kaleb67@yahoo.com\",\n  \"name\": \"Lillie Schuppe\",\n  \"mobileNo\": \"1-892-333-1668\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -1232,7 +1826,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Nedra.Mayert48\",\n      \"email\": \"Nettie_Krajcik74@gmail.com\",\n      \"name\": \"Leah Rath\",\n      \"mobileNo\": \"1-518-542-3802\",\n      \"userType\": 1,\n      \"id\": \"6232c42c45b11e7ada9c3114\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-03-24T17:16:24.166Z\",\n      \"updatedAt\": \"2023-02-10T21:34:16.627Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Mona_Smith\",\n      \"email\": \"Kaleb67@yahoo.com\",\n      \"name\": \"Lillie Schuppe\",\n      \"mobileNo\": \"1-892-333-1668\",\n      \"userType\": 1,\n      \"id\": \"6232c6dcaf4c8e8f514717e2\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-12-20T00:54:51.700Z\",\n      \"updatedAt\": \"2022-09-02T21:03:06.616Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1331,7 +1925,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"id\": \"6232c42c45b11e7ada9c3116\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-01T18:21:47.910Z\",\n    \"updatedAt\": \"2022-07-23T06:19:49.046Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"id\": \"6232c6dcaf4c8e8f514717e4\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-16T13:04:51.091Z\",\n    \"updatedAt\": \"2023-02-17T13:32:34.600Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1357,7 +1951,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Nedra.Mayert48\",\n  \"password\": \"Kalhv8D9M5mbyrx\",\n  \"email\": \"Nettie_Krajcik74@gmail.com\",\n  \"name\": \"Leah Rath\",\n  \"mobileNo\": \"1-518-542-3802\"\n}"
+                  "raw": "{\n  \"username\": \"Mona_Smith\",\n  \"password\": \"c5EXpg28YyXqRKb\",\n  \"email\": \"Kaleb67@yahoo.com\",\n  \"name\": \"Lillie Schuppe\",\n  \"mobileNo\": \"1-892-333-1668\"\n}"
                 },
                 "description": "",
                 "auth": {}
@@ -1375,7 +1969,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"id\": \"6232c42c45b11e7ada9c3116\",\n    \"loginRetryLimit\": 0,\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-01T18:21:47.910Z\",\n    \"updatedAt\": \"2022-07-23T06:19:49.046Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"id\": \"6232c6dcaf4c8e8f514717e4\",\n    \"loginRetryLimit\": 0,\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-16T13:04:51.091Z\",\n    \"updatedAt\": \"2023-02-17T13:32:34.600Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1617,7 +2211,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Grace Sauer\",\n    \"code\": \"XML\",\n    \"weight\": 226,\n    \"id\": \"6232c42c45b11e7ada9c312a\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-03-09T10:47:08.234Z\",\n    \"updatedAt\": \"2022-10-09T11:05:24.734Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Pamela Collier\",\n    \"code\": \"Product\",\n    \"weight\": 485,\n    \"id\": \"6232c6dcaf4c8e8f514717f8\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-19T08:17:33.774Z\",\n    \"updatedAt\": \"2022-09-06T06:14:15.178Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1643,7 +2237,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"name\": \"Grace Sauer\",\n  \"code\": \"XML\",\n  \"weight\": 226\n}"
+                  "raw": "{\n  \"name\": \"Pamela Collier\",\n  \"code\": \"Product\",\n  \"weight\": 485\n}"
                 },
                 "description": "",
                 "auth": {
@@ -1666,7 +2260,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Grace Sauer\",\n    \"code\": \"XML\",\n    \"weight\": 226,\n    \"id\": \"6232c42c45b11e7ada9c3124\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-03-09T10:47:08.234Z\",\n    \"updatedAt\": \"2022-10-09T11:05:24.734Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Pamela Collier\",\n    \"code\": \"Product\",\n    \"weight\": 485,\n    \"id\": \"6232c6dcaf4c8e8f514717f2\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-19T08:17:33.774Z\",\n    \"updatedAt\": \"2022-09-06T06:14:15.178Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1692,7 +2286,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Grace Sauer\",\n      \"code\": \"XML\",\n      \"weight\": 226\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Pamela Collier\",\n      \"code\": \"Product\",\n      \"weight\": 485\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -1715,7 +2309,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Grace Sauer\",\n      \"code\": \"XML\",\n      \"weight\": 226,\n      \"id\": \"6232c42c45b11e7ada9c3125\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-03-09T10:47:08.234Z\",\n      \"updatedAt\": \"2022-10-09T11:05:24.734Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Pamela Collier\",\n      \"code\": \"Product\",\n      \"weight\": 485,\n      \"id\": \"6232c6dcaf4c8e8f514717f3\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-19T08:17:33.774Z\",\n      \"updatedAt\": \"2022-09-06T06:14:15.178Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1764,7 +2358,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"name\": \"Grace Sauer\",\n        \"code\": \"XML\",\n        \"weight\": 226,\n        \"id\": \"6232c42c45b11e7ada9c3126\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2023-03-09T10:47:08.234Z\",\n        \"updatedAt\": \"2022-10-09T11:05:24.734Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"name\": \"Pamela Collier\",\n        \"code\": \"Product\",\n        \"weight\": 485,\n        \"id\": \"6232c6dcaf4c8e8f514717f4\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-11-19T08:17:33.774Z\",\n        \"updatedAt\": \"2022-09-06T06:14:15.178Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1911,7 +2505,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Grace Sauer\",\n      \"code\": \"XML\",\n      \"weight\": 226,\n      \"id\": \"6232c42c45b11e7ada9c3127\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-03-09T10:47:08.234Z\",\n      \"updatedAt\": \"2022-10-09T11:05:24.734Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Pamela Collier\",\n      \"code\": \"Product\",\n      \"weight\": 485,\n      \"id\": \"6232c6dcaf4c8e8f514717f5\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-19T08:17:33.774Z\",\n      \"updatedAt\": \"2022-09-06T06:14:15.178Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2058,7 +2652,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Grace Sauer\",\n    \"code\": \"XML\",\n    \"weight\": 226,\n    \"id\": \"6232c42c45b11e7ada9c3128\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-03-09T10:47:08.234Z\",\n    \"updatedAt\": \"2022-10-09T11:05:24.734Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Pamela Collier\",\n    \"code\": \"Product\",\n    \"weight\": 485,\n    \"id\": \"6232c6dcaf4c8e8f514717f6\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-19T08:17:33.774Z\",\n    \"updatedAt\": \"2022-09-06T06:14:15.178Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2084,7 +2678,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"name\": \"Grace Sauer\",\n  \"code\": \"XML\",\n  \"weight\": 226\n}"
+                  "raw": "{\n  \"name\": \"Pamela Collier\",\n  \"code\": \"Product\",\n  \"weight\": 485\n}"
                 },
                 "description": "",
                 "auth": {
@@ -2107,7 +2701,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Grace Sauer\",\n    \"code\": \"XML\",\n    \"weight\": 226,\n    \"id\": \"6232c42c45b11e7ada9c3129\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-03-09T10:47:08.234Z\",\n    \"updatedAt\": \"2022-10-09T11:05:24.734Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Pamela Collier\",\n    \"code\": \"Product\",\n    \"weight\": 485,\n    \"id\": \"6232c6dcaf4c8e8f514717f7\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-19T08:17:33.774Z\",\n    \"updatedAt\": \"2022-09-06T06:14:15.178Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2211,7 +2805,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"customized\",\n    \"method\": \"Universal\",\n    \"uri\": \"invoice\",\n    \"id\": \"6232c42c45b11e7ada9c3132\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-07-05T01:54:25.035Z\",\n    \"updatedAt\": \"2022-11-18T21:51:49.227Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"bypass\",\n    \"method\": \"payment\",\n    \"uri\": \"synthesize\",\n    \"id\": \"6232c6dcaf4c8e8f51471800\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-04T19:18:51.087Z\",\n    \"updatedAt\": \"2022-10-08T20:03:53.750Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2237,7 +2831,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"route_name\": \"customized\",\n  \"method\": \"Universal\",\n  \"uri\": \"invoice\"\n}"
+                  "raw": "{\n  \"route_name\": \"bypass\",\n  \"method\": \"payment\",\n  \"uri\": \"synthesize\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -2260,7 +2854,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"customized\",\n    \"method\": \"Universal\",\n    \"uri\": \"invoice\",\n    \"id\": \"6232c42c45b11e7ada9c312c\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-07-05T01:54:25.035Z\",\n    \"updatedAt\": \"2022-11-18T21:51:49.227Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"bypass\",\n    \"method\": \"payment\",\n    \"uri\": \"synthesize\",\n    \"id\": \"6232c6dcaf4c8e8f514717fa\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-04T19:18:51.087Z\",\n    \"updatedAt\": \"2022-10-08T20:03:53.750Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2286,7 +2880,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"route_name\": \"customized\",\n      \"method\": \"Universal\",\n      \"uri\": \"invoice\"\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"route_name\": \"bypass\",\n      \"method\": \"payment\",\n      \"uri\": \"synthesize\"\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -2309,7 +2903,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"route_name\": \"customized\",\n      \"method\": \"Universal\",\n      \"uri\": \"invoice\",\n      \"id\": \"6232c42c45b11e7ada9c312d\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-07-05T01:54:25.035Z\",\n      \"updatedAt\": \"2022-11-18T21:51:49.227Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"route_name\": \"bypass\",\n      \"method\": \"payment\",\n      \"uri\": \"synthesize\",\n      \"id\": \"6232c6dcaf4c8e8f514717fb\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-12-04T19:18:51.087Z\",\n      \"updatedAt\": \"2022-10-08T20:03:53.750Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2358,7 +2952,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"route_name\": \"customized\",\n        \"method\": \"Universal\",\n        \"uri\": \"invoice\",\n        \"id\": \"6232c42c45b11e7ada9c312e\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-07-05T01:54:25.035Z\",\n        \"updatedAt\": \"2022-11-18T21:51:49.227Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"route_name\": \"bypass\",\n        \"method\": \"payment\",\n        \"uri\": \"synthesize\",\n        \"id\": \"6232c6dcaf4c8e8f514717fc\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-12-04T19:18:51.087Z\",\n        \"updatedAt\": \"2022-10-08T20:03:53.750Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2505,7 +3099,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"route_name\": \"customized\",\n      \"method\": \"Universal\",\n      \"uri\": \"invoice\",\n      \"id\": \"6232c42c45b11e7ada9c312f\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-07-05T01:54:25.035Z\",\n      \"updatedAt\": \"2022-11-18T21:51:49.227Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"route_name\": \"bypass\",\n      \"method\": \"payment\",\n      \"uri\": \"synthesize\",\n      \"id\": \"6232c6dcaf4c8e8f514717fd\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-12-04T19:18:51.087Z\",\n      \"updatedAt\": \"2022-10-08T20:03:53.750Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2652,7 +3246,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"customized\",\n    \"method\": \"Universal\",\n    \"uri\": \"invoice\",\n    \"id\": \"6232c42c45b11e7ada9c3130\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-07-05T01:54:25.035Z\",\n    \"updatedAt\": \"2022-11-18T21:51:49.227Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"bypass\",\n    \"method\": \"payment\",\n    \"uri\": \"synthesize\",\n    \"id\": \"6232c6dcaf4c8e8f514717fe\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-04T19:18:51.087Z\",\n    \"updatedAt\": \"2022-10-08T20:03:53.750Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2678,7 +3272,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"route_name\": \"customized\",\n  \"method\": \"Universal\",\n  \"uri\": \"invoice\"\n}"
+                  "raw": "{\n  \"route_name\": \"bypass\",\n  \"method\": \"payment\",\n  \"uri\": \"synthesize\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -2701,7 +3295,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"customized\",\n    \"method\": \"Universal\",\n    \"uri\": \"invoice\",\n    \"id\": \"6232c42c45b11e7ada9c3131\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-07-05T01:54:25.035Z\",\n    \"updatedAt\": \"2022-11-18T21:51:49.227Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"bypass\",\n    \"method\": \"payment\",\n    \"uri\": \"synthesize\",\n    \"id\": \"6232c6dcaf4c8e8f514717ff\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-04T19:18:51.087Z\",\n    \"updatedAt\": \"2022-10-08T20:03:53.750Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2805,7 +3399,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"6232c42c45b11e7ada9c3133\",\n    \"roleId\": \"6232c42c45b11e7ada9c3134\",\n    \"id\": \"6232c42c45b11e7ada9c313c\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-05T15:00:40.720Z\",\n    \"updatedAt\": \"2022-11-07T10:59:14.278Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"6232c6dcaf4c8e8f51471801\",\n    \"roleId\": \"6232c6dcaf4c8e8f51471802\",\n    \"id\": \"6232c6dcaf4c8e8f5147180a\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-28T05:08:13.002Z\",\n    \"updatedAt\": \"2022-09-09T17:06:02.429Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2831,7 +3425,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"routeId\": \"6232c42c45b11e7ada9c3133\",\n  \"roleId\": \"6232c42c45b11e7ada9c3134\"\n}"
+                  "raw": "{\n  \"routeId\": \"6232c6dcaf4c8e8f51471801\",\n  \"roleId\": \"6232c6dcaf4c8e8f51471802\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -2854,7 +3448,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"6232c42c45b11e7ada9c3133\",\n    \"roleId\": \"6232c42c45b11e7ada9c3134\",\n    \"id\": \"6232c42c45b11e7ada9c3136\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-05T15:00:40.720Z\",\n    \"updatedAt\": \"2022-11-07T10:59:14.278Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"6232c6dcaf4c8e8f51471801\",\n    \"roleId\": \"6232c6dcaf4c8e8f51471802\",\n    \"id\": \"6232c6dcaf4c8e8f51471804\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-28T05:08:13.002Z\",\n    \"updatedAt\": \"2022-09-09T17:06:02.429Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2880,7 +3474,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"routeId\": \"6232c42c45b11e7ada9c3133\",\n      \"roleId\": \"6232c42c45b11e7ada9c3134\"\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"routeId\": \"6232c6dcaf4c8e8f51471801\",\n      \"roleId\": \"6232c6dcaf4c8e8f51471802\"\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -2903,7 +3497,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"routeId\": \"6232c42c45b11e7ada9c3133\",\n      \"roleId\": \"6232c42c45b11e7ada9c3134\",\n      \"id\": \"6232c42c45b11e7ada9c3137\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-05T15:00:40.720Z\",\n      \"updatedAt\": \"2022-11-07T10:59:14.278Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"routeId\": \"6232c6dcaf4c8e8f51471801\",\n      \"roleId\": \"6232c6dcaf4c8e8f51471802\",\n      \"id\": \"6232c6dcaf4c8e8f51471805\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-28T05:08:13.002Z\",\n      \"updatedAt\": \"2022-09-09T17:06:02.429Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2952,7 +3546,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"routeId\": \"6232c42c45b11e7ada9c3133\",\n        \"roleId\": \"6232c42c45b11e7ada9c3134\",\n        \"id\": \"6232c42c45b11e7ada9c3138\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-10-05T15:00:40.720Z\",\n        \"updatedAt\": \"2022-11-07T10:59:14.278Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"routeId\": \"6232c6dcaf4c8e8f51471801\",\n        \"roleId\": \"6232c6dcaf4c8e8f51471802\",\n        \"id\": \"6232c6dcaf4c8e8f51471806\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-10-28T05:08:13.002Z\",\n        \"updatedAt\": \"2022-09-09T17:06:02.429Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3099,7 +3693,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"routeId\": \"6232c42c45b11e7ada9c3133\",\n      \"roleId\": \"6232c42c45b11e7ada9c3134\",\n      \"id\": \"6232c42c45b11e7ada9c3139\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-05T15:00:40.720Z\",\n      \"updatedAt\": \"2022-11-07T10:59:14.278Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"routeId\": \"6232c6dcaf4c8e8f51471801\",\n      \"roleId\": \"6232c6dcaf4c8e8f51471802\",\n      \"id\": \"6232c6dcaf4c8e8f51471807\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-28T05:08:13.002Z\",\n      \"updatedAt\": \"2022-09-09T17:06:02.429Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3246,7 +3840,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"6232c42c45b11e7ada9c3133\",\n    \"roleId\": \"6232c42c45b11e7ada9c3134\",\n    \"id\": \"6232c42c45b11e7ada9c313a\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-05T15:00:40.720Z\",\n    \"updatedAt\": \"2022-11-07T10:59:14.278Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"6232c6dcaf4c8e8f51471801\",\n    \"roleId\": \"6232c6dcaf4c8e8f51471802\",\n    \"id\": \"6232c6dcaf4c8e8f51471808\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-28T05:08:13.002Z\",\n    \"updatedAt\": \"2022-09-09T17:06:02.429Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3272,7 +3866,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"routeId\": \"6232c42c45b11e7ada9c3133\",\n  \"roleId\": \"6232c42c45b11e7ada9c3134\"\n}"
+                  "raw": "{\n  \"routeId\": \"6232c6dcaf4c8e8f51471801\",\n  \"roleId\": \"6232c6dcaf4c8e8f51471802\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -3295,7 +3889,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"6232c42c45b11e7ada9c3133\",\n    \"roleId\": \"6232c42c45b11e7ada9c3134\",\n    \"id\": \"6232c42c45b11e7ada9c313b\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-05T15:00:40.720Z\",\n    \"updatedAt\": \"2022-11-07T10:59:14.278Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"6232c6dcaf4c8e8f51471801\",\n    \"roleId\": \"6232c6dcaf4c8e8f51471802\",\n    \"id\": \"6232c6dcaf4c8e8f51471809\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-28T05:08:13.002Z\",\n    \"updatedAt\": \"2022-09-09T17:06:02.429Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3399,7 +3993,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"6232c42c45b11e7ada9c313d\",\n    \"roleId\": \"6232c42c45b11e7ada9c313e\",\n    \"id\": \"6232c42c45b11e7ada9c3146\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-29T13:50:44.021Z\",\n    \"updatedAt\": \"2022-06-14T07:34:34.126Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"6232c6dcaf4c8e8f5147180b\",\n    \"roleId\": \"6232c6dcaf4c8e8f5147180c\",\n    \"id\": \"6232c6dcaf4c8e8f51471814\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-09T00:07:03.484Z\",\n    \"updatedAt\": \"2022-09-01T02:11:00.082Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3425,7 +4019,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"userId\": \"6232c42c45b11e7ada9c313d\",\n  \"roleId\": \"6232c42c45b11e7ada9c313e\"\n}"
+                  "raw": "{\n  \"userId\": \"6232c6dcaf4c8e8f5147180b\",\n  \"roleId\": \"6232c6dcaf4c8e8f5147180c\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -3448,7 +4042,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"6232c42c45b11e7ada9c313d\",\n    \"roleId\": \"6232c42c45b11e7ada9c313e\",\n    \"id\": \"6232c42c45b11e7ada9c3140\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-29T13:50:44.021Z\",\n    \"updatedAt\": \"2022-06-14T07:34:34.126Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"6232c6dcaf4c8e8f5147180b\",\n    \"roleId\": \"6232c6dcaf4c8e8f5147180c\",\n    \"id\": \"6232c6dcaf4c8e8f5147180e\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-09T00:07:03.484Z\",\n    \"updatedAt\": \"2022-09-01T02:11:00.082Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3474,7 +4068,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"userId\": \"6232c42c45b11e7ada9c313d\",\n      \"roleId\": \"6232c42c45b11e7ada9c313e\"\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"userId\": \"6232c6dcaf4c8e8f5147180b\",\n      \"roleId\": \"6232c6dcaf4c8e8f5147180c\"\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -3497,7 +4091,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"userId\": \"6232c42c45b11e7ada9c313d\",\n      \"roleId\": \"6232c42c45b11e7ada9c313e\",\n      \"id\": \"6232c42c45b11e7ada9c3141\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-29T13:50:44.021Z\",\n      \"updatedAt\": \"2022-06-14T07:34:34.126Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"userId\": \"6232c6dcaf4c8e8f5147180b\",\n      \"roleId\": \"6232c6dcaf4c8e8f5147180c\",\n      \"id\": \"6232c6dcaf4c8e8f5147180f\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-12-09T00:07:03.484Z\",\n      \"updatedAt\": \"2022-09-01T02:11:00.082Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3546,7 +4140,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"userId\": \"6232c42c45b11e7ada9c313d\",\n        \"roleId\": \"6232c42c45b11e7ada9c313e\",\n        \"id\": \"6232c42c45b11e7ada9c3142\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-11-29T13:50:44.021Z\",\n        \"updatedAt\": \"2022-06-14T07:34:34.126Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"userId\": \"6232c6dcaf4c8e8f5147180b\",\n        \"roleId\": \"6232c6dcaf4c8e8f5147180c\",\n        \"id\": \"6232c6dcaf4c8e8f51471810\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-12-09T00:07:03.484Z\",\n        \"updatedAt\": \"2022-09-01T02:11:00.082Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3693,7 +4287,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"userId\": \"6232c42c45b11e7ada9c313d\",\n      \"roleId\": \"6232c42c45b11e7ada9c313e\",\n      \"id\": \"6232c42c45b11e7ada9c3143\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-29T13:50:44.021Z\",\n      \"updatedAt\": \"2022-06-14T07:34:34.126Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"userId\": \"6232c6dcaf4c8e8f5147180b\",\n      \"roleId\": \"6232c6dcaf4c8e8f5147180c\",\n      \"id\": \"6232c6dcaf4c8e8f51471811\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-12-09T00:07:03.484Z\",\n      \"updatedAt\": \"2022-09-01T02:11:00.082Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3840,7 +4434,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"6232c42c45b11e7ada9c313d\",\n    \"roleId\": \"6232c42c45b11e7ada9c313e\",\n    \"id\": \"6232c42c45b11e7ada9c3144\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-29T13:50:44.021Z\",\n    \"updatedAt\": \"2022-06-14T07:34:34.126Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"6232c6dcaf4c8e8f5147180b\",\n    \"roleId\": \"6232c6dcaf4c8e8f5147180c\",\n    \"id\": \"6232c6dcaf4c8e8f51471812\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-09T00:07:03.484Z\",\n    \"updatedAt\": \"2022-09-01T02:11:00.082Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3866,7 +4460,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"userId\": \"6232c42c45b11e7ada9c313d\",\n  \"roleId\": \"6232c42c45b11e7ada9c313e\"\n}"
+                  "raw": "{\n  \"userId\": \"6232c6dcaf4c8e8f5147180b\",\n  \"roleId\": \"6232c6dcaf4c8e8f5147180c\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -3889,7 +4483,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"6232c42c45b11e7ada9c313d\",\n    \"roleId\": \"6232c42c45b11e7ada9c313e\",\n    \"id\": \"6232c42c45b11e7ada9c3145\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-29T13:50:44.021Z\",\n    \"updatedAt\": \"2022-06-14T07:34:34.126Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"6232c6dcaf4c8e8f5147180b\",\n    \"roleId\": \"6232c6dcaf4c8e8f5147180c\",\n    \"id\": \"6232c6dcaf4c8e8f51471813\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-09T00:07:03.484Z\",\n    \"updatedAt\": \"2022-09-01T02:11:00.082Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3959,6 +4553,600 @@
       "description": "device APIs",
       "item": [
         {
+          "name": "Event",
+          "description": "Event Model APIs",
+          "item": [
+            {
+              "name": "getEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/:id",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "getEvent_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/:id"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dixie Cassin\",\n    \"description\": \"Hampshire\",\n    \"address\": {\n      \"line1\": \"wireless\",\n      \"line2\": \"Handcrafted\",\n      \"city\": \"user-facing\",\n      \"country\": \"line\",\n      \"state\": \"Chair\",\n      \"pincode\": \"withdrawal\",\n      \"lat\": 945,\n      \"lng\": 488\n    },\n    \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n    \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Dominick Sipes\",\n        \"image\": \"Soft\",\n        \"email\": \"Aniya_Lehner@gmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Loretta Schuppe\",\n      \"image\": \"Product\",\n      \"email\": \"Brianne.Runte30@hotmail.com\",\n      \"url\": \"PNG\"\n    },\n    \"image\": \"Administrator\",\n    \"id\": \"6232c6dcaf4c8e8f514717ca\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-18T12:29:16.505Z\",\n    \"updatedAt\": \"2022-10-03T05:35:53.036Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Dixie Cassin\",\n  \"description\": \"Hampshire\",\n  \"address\": {\n    \"line1\": \"wireless\",\n    \"line2\": \"Handcrafted\",\n    \"city\": \"user-facing\",\n    \"country\": \"line\",\n    \"state\": \"Chair\",\n    \"pincode\": \"withdrawal\",\n    \"lat\": 945,\n    \"lng\": 488\n  },\n  \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n  \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n  \"speakers\": [\n    {\n      \"_id\": false,\n      \"name\": \"Dominick Sipes\",\n      \"image\": \"Soft\",\n      \"email\": \"Aniya_Lehner@gmail.com\"\n    }\n  ],\n  \"organizer\": {\n    \"name\": \"Loretta Schuppe\",\n    \"image\": \"Product\",\n    \"email\": \"Brianne.Runte30@hotmail.com\",\n    \"url\": \"PNG\"\n  },\n  \"image\": \"Administrator\"\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "addEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/create"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dixie Cassin\",\n    \"description\": \"Hampshire\",\n    \"address\": {\n      \"line1\": \"wireless\",\n      \"line2\": \"Handcrafted\",\n      \"city\": \"user-facing\",\n      \"country\": \"line\",\n      \"state\": \"Chair\",\n      \"pincode\": \"withdrawal\",\n      \"lat\": 945,\n      \"lng\": 488\n    },\n    \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n    \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Dominick Sipes\",\n        \"image\": \"Soft\",\n        \"email\": \"Aniya_Lehner@gmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Loretta Schuppe\",\n      \"image\": \"Product\",\n      \"email\": \"Brianne.Runte30@hotmail.com\",\n      \"url\": \"PNG\"\n    },\n    \"image\": \"Administrator\",\n    \"id\": \"6232c6dcaf4c8e8f514717c4\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-18T12:29:16.505Z\",\n    \"updatedAt\": \"2022-10-03T05:35:53.036Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "findAllEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/list"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"name\": \"Dixie Cassin\",\n        \"description\": \"Hampshire\",\n        \"address\": {\n          \"line1\": \"wireless\",\n          \"line2\": \"Handcrafted\",\n          \"city\": \"user-facing\",\n          \"country\": \"line\",\n          \"state\": \"Chair\",\n          \"pincode\": \"withdrawal\",\n          \"lat\": 945,\n          \"lng\": 488\n        },\n        \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n        \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n        \"speakers\": [\n          {\n            \"_id\": false,\n            \"name\": \"Dominick Sipes\",\n            \"image\": \"Soft\",\n            \"email\": \"Aniya_Lehner@gmail.com\"\n          }\n        ],\n        \"organizer\": {\n          \"name\": \"Loretta Schuppe\",\n          \"image\": \"Product\",\n          \"email\": \"Brianne.Runte30@hotmail.com\",\n          \"url\": \"PNG\"\n        },\n        \"image\": \"Administrator\",\n        \"id\": \"6232c6dcaf4c8e8f514717c5\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-10-18T12:29:16.505Z\",\n        \"updatedAt\": \"2022-10-03T05:35:53.036Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getEventCount",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "getEventCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/count"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Dixie Cassin\",\n      \"description\": \"Hampshire\",\n      \"address\": {\n        \"line1\": \"wireless\",\n        \"line2\": \"Handcrafted\",\n        \"city\": \"user-facing\",\n        \"country\": \"line\",\n        \"state\": \"Chair\",\n        \"pincode\": \"withdrawal\",\n        \"lat\": 945,\n        \"lng\": 488\n      },\n      \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n      \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Dominick Sipes\",\n          \"image\": \"Soft\",\n          \"email\": \"Aniya_Lehner@gmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Loretta Schuppe\",\n        \"image\": \"Product\",\n        \"email\": \"Brianne.Runte30@hotmail.com\",\n        \"url\": \"PNG\"\n      },\n      \"image\": \"Administrator\"\n    }\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "insertBulkEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/addBulk"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Dixie Cassin\",\n      \"description\": \"Hampshire\",\n      \"address\": {\n        \"line1\": \"wireless\",\n        \"line2\": \"Handcrafted\",\n        \"city\": \"user-facing\",\n        \"country\": \"line\",\n        \"state\": \"Chair\",\n        \"pincode\": \"withdrawal\",\n        \"lat\": 945,\n        \"lng\": 488\n      },\n      \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n      \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Dominick Sipes\",\n          \"image\": \"Soft\",\n          \"email\": \"Aniya_Lehner@gmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Loretta Schuppe\",\n        \"image\": \"Product\",\n        \"email\": \"Brianne.Runte30@hotmail.com\",\n        \"url\": \"PNG\"\n      },\n      \"image\": \"Administrator\",\n      \"id\": \"6232c6dcaf4c8e8f514717c6\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-18T12:29:16.505Z\",\n      \"updatedAt\": \"2022-10-03T05:35:53.036Z\"\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteManyEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/deleteMany",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true,\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "deleteManyEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/deleteMany"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"ok\": 1,\n    \"deletedCount\": 2\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/softDeleteMany",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/softDeleteMany"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/updateBulk",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "updateBulkEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/updateBulk"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Dixie Cassin\",\n      \"description\": \"Hampshire\",\n      \"address\": {\n        \"line1\": \"wireless\",\n        \"line2\": \"Handcrafted\",\n        \"city\": \"user-facing\",\n        \"country\": \"line\",\n        \"state\": \"Chair\",\n        \"pincode\": \"withdrawal\",\n        \"lat\": 945,\n        \"lng\": 488\n      },\n      \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n      \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Dominick Sipes\",\n          \"image\": \"Soft\",\n          \"email\": \"Aniya_Lehner@gmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Loretta Schuppe\",\n        \"image\": \"Product\",\n        \"email\": \"Brianne.Runte30@hotmail.com\",\n        \"url\": \"PNG\"\n      },\n      \"image\": \"Administrator\",\n      \"id\": \"6232c6dcaf4c8e8f514717c7\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-18T12:29:16.505Z\",\n      \"updatedAt\": \"2022-10-03T05:35:53.036Z\"\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/softDelete/:id",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "softDeleteEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/softDelete/:id"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/partial-update/:id",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "partialupdateEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/partial-update/:id"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dixie Cassin\",\n    \"description\": \"Hampshire\",\n    \"address\": {\n      \"line1\": \"wireless\",\n      \"line2\": \"Handcrafted\",\n      \"city\": \"user-facing\",\n      \"country\": \"line\",\n      \"state\": \"Chair\",\n      \"pincode\": \"withdrawal\",\n      \"lat\": 945,\n      \"lng\": 488\n    },\n    \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n    \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Dominick Sipes\",\n        \"image\": \"Soft\",\n        \"email\": \"Aniya_Lehner@gmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Loretta Schuppe\",\n      \"image\": \"Product\",\n      \"email\": \"Brianne.Runte30@hotmail.com\",\n      \"url\": \"PNG\"\n    },\n    \"image\": \"Administrator\",\n    \"id\": \"6232c6dcaf4c8e8f514717c8\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-18T12:29:16.505Z\",\n    \"updatedAt\": \"2022-10-03T05:35:53.036Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/update/:id",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Dixie Cassin\",\n  \"description\": \"Hampshire\",\n  \"address\": {\n    \"line1\": \"wireless\",\n    \"line2\": \"Handcrafted\",\n    \"city\": \"user-facing\",\n    \"country\": \"line\",\n    \"state\": \"Chair\",\n    \"pincode\": \"withdrawal\",\n    \"lat\": 945,\n    \"lng\": 488\n  },\n  \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n  \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n  \"speakers\": [\n    {\n      \"_id\": false,\n      \"name\": \"Dominick Sipes\",\n      \"image\": \"Soft\",\n      \"email\": \"Aniya_Lehner@gmail.com\"\n    }\n  ],\n  \"organizer\": {\n    \"name\": \"Loretta Schuppe\",\n    \"image\": \"Product\",\n    \"email\": \"Brianne.Runte30@hotmail.com\",\n    \"url\": \"PNG\"\n  },\n  \"image\": \"Administrator\"\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "updateEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/update/:id"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dixie Cassin\",\n    \"description\": \"Hampshire\",\n    \"address\": {\n      \"line1\": \"wireless\",\n      \"line2\": \"Handcrafted\",\n      \"city\": \"user-facing\",\n      \"country\": \"line\",\n      \"state\": \"Chair\",\n      \"pincode\": \"withdrawal\",\n      \"lat\": 945,\n      \"lng\": 488\n    },\n    \"startDateTime\": \"2022-12-31T20:57:33.200Z\",\n    \"endDateTime\": \"2022-04-11T09:38:41.603Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Dominick Sipes\",\n        \"image\": \"Soft\",\n        \"email\": \"Aniya_Lehner@gmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Loretta Schuppe\",\n      \"image\": \"Product\",\n      \"email\": \"Brianne.Runte30@hotmail.com\",\n      \"url\": \"PNG\"\n    },\n    \"image\": \"Administrator\",\n    \"id\": \"6232c6dcaf4c8e8f514717c9\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-18T12:29:16.505Z\",\n    \"updatedAt\": \"2022-10-03T05:35:53.036Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteEvent",
+              "request": {
+                "url": "{{url}}/device/api/v1/event/delete/:id",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "deleteEvent_response",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/delete/:id"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"ok\": 1,\n    \"deletedCount\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
           "name": "Blog",
           "description": "Blog Model APIs",
           "item": [
@@ -3999,7 +5187,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Product\",\n    \"alternativeHeadline\": \"Corporate\",\n    \"image\": \"Executive\",\n    \"publishDate\": \"embrace\",\n    \"author\": {\n      \"name\": \"Kristen Haley\",\n      \"image\": \"Triple-buffered\",\n      \"email\": \"Faye.OConnell77@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Cesar Prosacco\",\n      \"url\": \"HDD\",\n      \"logo\": \"Fresh\"\n    },\n    \"articleSection\": \"Agent\",\n    \"articleBody\": \"communities\",\n    \"description\": \"Connecticut\",\n    \"slug\": \"quantify\",\n    \"url\": \"withdrawal\",\n    \"isDraft\": true,\n    \"id\": \"6232c42c45b11e7ada9c310b\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-09-23T06:33:12.939Z\",\n    \"updatedAt\": \"2022-06-10T06:41:46.693Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Chair\",\n    \"alternativeHeadline\": \"program\",\n    \"image\": \"Vanuatu\",\n    \"publishDate\": \"National\",\n    \"author\": {\n      \"name\": \"Juana Yundt\",\n      \"image\": \"Frozen\",\n      \"email\": \"Ocie.Funk@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Raymond Jacobi\",\n      \"url\": \"Specialist\",\n      \"logo\": \"Cheese\"\n    },\n    \"articleSection\": \"Supervisor\",\n    \"articleBody\": \"envisioneer\",\n    \"description\": \"Analyst\",\n    \"slug\": \"Graphic\",\n    \"url\": \"Profound\",\n    \"isDraft\": true,\n    \"id\": \"6232c6dcaf4c8e8f514717d9\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-07T14:15:19.033Z\",\n    \"updatedAt\": \"2022-11-05T07:21:43.880Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4025,7 +5213,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"title\": \"Product\",\n  \"alternativeHeadline\": \"Corporate\",\n  \"image\": \"Executive\",\n  \"publishDate\": \"embrace\",\n  \"author\": {\n    \"name\": \"Kristen Haley\",\n    \"image\": \"Triple-buffered\",\n    \"email\": \"Faye.OConnell77@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Cesar Prosacco\",\n    \"url\": \"HDD\",\n    \"logo\": \"Fresh\"\n  },\n  \"articleSection\": \"Agent\",\n  \"articleBody\": \"communities\",\n  \"description\": \"Connecticut\",\n  \"slug\": \"quantify\",\n  \"url\": \"withdrawal\",\n  \"isDraft\": true\n}"
+                  "raw": "{\n  \"title\": \"Chair\",\n  \"alternativeHeadline\": \"program\",\n  \"image\": \"Vanuatu\",\n  \"publishDate\": \"National\",\n  \"author\": {\n    \"name\": \"Juana Yundt\",\n    \"image\": \"Frozen\",\n    \"email\": \"Ocie.Funk@yahoo.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Raymond Jacobi\",\n    \"url\": \"Specialist\",\n    \"logo\": \"Cheese\"\n  },\n  \"articleSection\": \"Supervisor\",\n  \"articleBody\": \"envisioneer\",\n  \"description\": \"Analyst\",\n  \"slug\": \"Graphic\",\n  \"url\": \"Profound\",\n  \"isDraft\": true\n}"
                 },
                 "description": "",
                 "auth": {
@@ -4048,7 +5236,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Product\",\n    \"alternativeHeadline\": \"Corporate\",\n    \"image\": \"Executive\",\n    \"publishDate\": \"embrace\",\n    \"author\": {\n      \"name\": \"Kristen Haley\",\n      \"image\": \"Triple-buffered\",\n      \"email\": \"Faye.OConnell77@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Cesar Prosacco\",\n      \"url\": \"HDD\",\n      \"logo\": \"Fresh\"\n    },\n    \"articleSection\": \"Agent\",\n    \"articleBody\": \"communities\",\n    \"description\": \"Connecticut\",\n    \"slug\": \"quantify\",\n    \"url\": \"withdrawal\",\n    \"isDraft\": true,\n    \"id\": \"6232c42c45b11e7ada9c3105\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-09-23T06:33:12.939Z\",\n    \"updatedAt\": \"2022-06-10T06:41:46.693Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Chair\",\n    \"alternativeHeadline\": \"program\",\n    \"image\": \"Vanuatu\",\n    \"publishDate\": \"National\",\n    \"author\": {\n      \"name\": \"Juana Yundt\",\n      \"image\": \"Frozen\",\n      \"email\": \"Ocie.Funk@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Raymond Jacobi\",\n      \"url\": \"Specialist\",\n      \"logo\": \"Cheese\"\n    },\n    \"articleSection\": \"Supervisor\",\n    \"articleBody\": \"envisioneer\",\n    \"description\": \"Analyst\",\n    \"slug\": \"Graphic\",\n    \"url\": \"Profound\",\n    \"isDraft\": true,\n    \"id\": \"6232c6dcaf4c8e8f514717d3\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-07T14:15:19.033Z\",\n    \"updatedAt\": \"2022-11-05T07:21:43.880Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4097,7 +5285,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"Product\",\n        \"alternativeHeadline\": \"Corporate\",\n        \"image\": \"Executive\",\n        \"publishDate\": \"embrace\",\n        \"author\": {\n          \"name\": \"Kristen Haley\",\n          \"image\": \"Triple-buffered\",\n          \"email\": \"Faye.OConnell77@gmail.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Cesar Prosacco\",\n          \"url\": \"HDD\",\n          \"logo\": \"Fresh\"\n        },\n        \"articleSection\": \"Agent\",\n        \"articleBody\": \"communities\",\n        \"description\": \"Connecticut\",\n        \"slug\": \"quantify\",\n        \"url\": \"withdrawal\",\n        \"isDraft\": true,\n        \"id\": \"6232c42c45b11e7ada9c3106\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-09-23T06:33:12.939Z\",\n        \"updatedAt\": \"2022-06-10T06:41:46.693Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"Chair\",\n        \"alternativeHeadline\": \"program\",\n        \"image\": \"Vanuatu\",\n        \"publishDate\": \"National\",\n        \"author\": {\n          \"name\": \"Juana Yundt\",\n          \"image\": \"Frozen\",\n          \"email\": \"Ocie.Funk@yahoo.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Raymond Jacobi\",\n          \"url\": \"Specialist\",\n          \"logo\": \"Cheese\"\n        },\n        \"articleSection\": \"Supervisor\",\n        \"articleBody\": \"envisioneer\",\n        \"description\": \"Analyst\",\n        \"slug\": \"Graphic\",\n        \"url\": \"Profound\",\n        \"isDraft\": true,\n        \"id\": \"6232c6dcaf4c8e8f514717d4\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2023-02-07T14:15:19.033Z\",\n        \"updatedAt\": \"2022-11-05T07:21:43.880Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4172,7 +5360,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"Product\",\n      \"alternativeHeadline\": \"Corporate\",\n      \"image\": \"Executive\",\n      \"publishDate\": \"embrace\",\n      \"author\": {\n        \"name\": \"Kristen Haley\",\n        \"image\": \"Triple-buffered\",\n        \"email\": \"Faye.OConnell77@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Cesar Prosacco\",\n        \"url\": \"HDD\",\n        \"logo\": \"Fresh\"\n      },\n      \"articleSection\": \"Agent\",\n      \"articleBody\": \"communities\",\n      \"description\": \"Connecticut\",\n      \"slug\": \"quantify\",\n      \"url\": \"withdrawal\",\n      \"isDraft\": true\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"Chair\",\n      \"alternativeHeadline\": \"program\",\n      \"image\": \"Vanuatu\",\n      \"publishDate\": \"National\",\n      \"author\": {\n        \"name\": \"Juana Yundt\",\n        \"image\": \"Frozen\",\n        \"email\": \"Ocie.Funk@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Raymond Jacobi\",\n        \"url\": \"Specialist\",\n        \"logo\": \"Cheese\"\n      },\n      \"articleSection\": \"Supervisor\",\n      \"articleBody\": \"envisioneer\",\n      \"description\": \"Analyst\",\n      \"slug\": \"Graphic\",\n      \"url\": \"Profound\",\n      \"isDraft\": true\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -4195,7 +5383,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Product\",\n      \"alternativeHeadline\": \"Corporate\",\n      \"image\": \"Executive\",\n      \"publishDate\": \"embrace\",\n      \"author\": {\n        \"name\": \"Kristen Haley\",\n        \"image\": \"Triple-buffered\",\n        \"email\": \"Faye.OConnell77@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Cesar Prosacco\",\n        \"url\": \"HDD\",\n        \"logo\": \"Fresh\"\n      },\n      \"articleSection\": \"Agent\",\n      \"articleBody\": \"communities\",\n      \"description\": \"Connecticut\",\n      \"slug\": \"quantify\",\n      \"url\": \"withdrawal\",\n      \"isDraft\": true,\n      \"id\": \"6232c42c45b11e7ada9c3107\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-09-23T06:33:12.939Z\",\n      \"updatedAt\": \"2022-06-10T06:41:46.693Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Chair\",\n      \"alternativeHeadline\": \"program\",\n      \"image\": \"Vanuatu\",\n      \"publishDate\": \"National\",\n      \"author\": {\n        \"name\": \"Juana Yundt\",\n        \"image\": \"Frozen\",\n        \"email\": \"Ocie.Funk@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Raymond Jacobi\",\n        \"url\": \"Specialist\",\n        \"logo\": \"Cheese\"\n      },\n      \"articleSection\": \"Supervisor\",\n      \"articleBody\": \"envisioneer\",\n      \"description\": \"Analyst\",\n      \"slug\": \"Graphic\",\n      \"url\": \"Profound\",\n      \"isDraft\": true,\n      \"id\": \"6232c6dcaf4c8e8f514717d5\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-02-07T14:15:19.033Z\",\n      \"updatedAt\": \"2022-11-05T07:21:43.880Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4342,7 +5530,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Product\",\n      \"alternativeHeadline\": \"Corporate\",\n      \"image\": \"Executive\",\n      \"publishDate\": \"embrace\",\n      \"author\": {\n        \"name\": \"Kristen Haley\",\n        \"image\": \"Triple-buffered\",\n        \"email\": \"Faye.OConnell77@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Cesar Prosacco\",\n        \"url\": \"HDD\",\n        \"logo\": \"Fresh\"\n      },\n      \"articleSection\": \"Agent\",\n      \"articleBody\": \"communities\",\n      \"description\": \"Connecticut\",\n      \"slug\": \"quantify\",\n      \"url\": \"withdrawal\",\n      \"isDraft\": true,\n      \"id\": \"6232c42c45b11e7ada9c3108\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-09-23T06:33:12.939Z\",\n      \"updatedAt\": \"2022-06-10T06:41:46.693Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Chair\",\n      \"alternativeHeadline\": \"program\",\n      \"image\": \"Vanuatu\",\n      \"publishDate\": \"National\",\n      \"author\": {\n        \"name\": \"Juana Yundt\",\n        \"image\": \"Frozen\",\n        \"email\": \"Ocie.Funk@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Raymond Jacobi\",\n        \"url\": \"Specialist\",\n        \"logo\": \"Cheese\"\n      },\n      \"articleSection\": \"Supervisor\",\n      \"articleBody\": \"envisioneer\",\n      \"description\": \"Analyst\",\n      \"slug\": \"Graphic\",\n      \"url\": \"Profound\",\n      \"isDraft\": true,\n      \"id\": \"6232c6dcaf4c8e8f514717d6\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-02-07T14:15:19.033Z\",\n      \"updatedAt\": \"2022-11-05T07:21:43.880Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4440,7 +5628,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Product\",\n    \"alternativeHeadline\": \"Corporate\",\n    \"image\": \"Executive\",\n    \"publishDate\": \"embrace\",\n    \"author\": {\n      \"name\": \"Kristen Haley\",\n      \"image\": \"Triple-buffered\",\n      \"email\": \"Faye.OConnell77@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Cesar Prosacco\",\n      \"url\": \"HDD\",\n      \"logo\": \"Fresh\"\n    },\n    \"articleSection\": \"Agent\",\n    \"articleBody\": \"communities\",\n    \"description\": \"Connecticut\",\n    \"slug\": \"quantify\",\n    \"url\": \"withdrawal\",\n    \"isDraft\": true,\n    \"id\": \"6232c42c45b11e7ada9c3109\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-09-23T06:33:12.939Z\",\n    \"updatedAt\": \"2022-06-10T06:41:46.693Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Chair\",\n    \"alternativeHeadline\": \"program\",\n    \"image\": \"Vanuatu\",\n    \"publishDate\": \"National\",\n    \"author\": {\n      \"name\": \"Juana Yundt\",\n      \"image\": \"Frozen\",\n      \"email\": \"Ocie.Funk@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Raymond Jacobi\",\n      \"url\": \"Specialist\",\n      \"logo\": \"Cheese\"\n    },\n    \"articleSection\": \"Supervisor\",\n    \"articleBody\": \"envisioneer\",\n    \"description\": \"Analyst\",\n    \"slug\": \"Graphic\",\n    \"url\": \"Profound\",\n    \"isDraft\": true,\n    \"id\": \"6232c6dcaf4c8e8f514717d7\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-07T14:15:19.033Z\",\n    \"updatedAt\": \"2022-11-05T07:21:43.880Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4466,7 +5654,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"title\": \"Product\",\n  \"alternativeHeadline\": \"Corporate\",\n  \"image\": \"Executive\",\n  \"publishDate\": \"embrace\",\n  \"author\": {\n    \"name\": \"Kristen Haley\",\n    \"image\": \"Triple-buffered\",\n    \"email\": \"Faye.OConnell77@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Cesar Prosacco\",\n    \"url\": \"HDD\",\n    \"logo\": \"Fresh\"\n  },\n  \"articleSection\": \"Agent\",\n  \"articleBody\": \"communities\",\n  \"description\": \"Connecticut\",\n  \"slug\": \"quantify\",\n  \"url\": \"withdrawal\",\n  \"isDraft\": true\n}"
+                  "raw": "{\n  \"title\": \"Chair\",\n  \"alternativeHeadline\": \"program\",\n  \"image\": \"Vanuatu\",\n  \"publishDate\": \"National\",\n  \"author\": {\n    \"name\": \"Juana Yundt\",\n    \"image\": \"Frozen\",\n    \"email\": \"Ocie.Funk@yahoo.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Raymond Jacobi\",\n    \"url\": \"Specialist\",\n    \"logo\": \"Cheese\"\n  },\n  \"articleSection\": \"Supervisor\",\n  \"articleBody\": \"envisioneer\",\n  \"description\": \"Analyst\",\n  \"slug\": \"Graphic\",\n  \"url\": \"Profound\",\n  \"isDraft\": true\n}"
                 },
                 "description": "",
                 "auth": {
@@ -4489,7 +5677,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Product\",\n    \"alternativeHeadline\": \"Corporate\",\n    \"image\": \"Executive\",\n    \"publishDate\": \"embrace\",\n    \"author\": {\n      \"name\": \"Kristen Haley\",\n      \"image\": \"Triple-buffered\",\n      \"email\": \"Faye.OConnell77@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Cesar Prosacco\",\n      \"url\": \"HDD\",\n      \"logo\": \"Fresh\"\n    },\n    \"articleSection\": \"Agent\",\n    \"articleBody\": \"communities\",\n    \"description\": \"Connecticut\",\n    \"slug\": \"quantify\",\n    \"url\": \"withdrawal\",\n    \"isDraft\": true,\n    \"id\": \"6232c42c45b11e7ada9c310a\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-09-23T06:33:12.939Z\",\n    \"updatedAt\": \"2022-06-10T06:41:46.693Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Chair\",\n    \"alternativeHeadline\": \"program\",\n    \"image\": \"Vanuatu\",\n    \"publishDate\": \"National\",\n    \"author\": {\n      \"name\": \"Juana Yundt\",\n      \"image\": \"Frozen\",\n      \"email\": \"Ocie.Funk@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Raymond Jacobi\",\n      \"url\": \"Specialist\",\n      \"logo\": \"Cheese\"\n    },\n    \"articleSection\": \"Supervisor\",\n    \"articleBody\": \"envisioneer\",\n    \"description\": \"Analyst\",\n    \"slug\": \"Graphic\",\n    \"url\": \"Profound\",\n    \"isDraft\": true,\n    \"id\": \"6232c6dcaf4c8e8f514717d8\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-07T14:15:19.033Z\",\n    \"updatedAt\": \"2022-11-05T07:21:43.880Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4593,7 +5781,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"userType\": 1,\n    \"id\": \"6232c42c45b11e7ada9c311d\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-09T21:17:37.693Z\",\n    \"updatedAt\": \"2022-12-30T19:26:44.475Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"userType\": 1,\n    \"id\": \"6232c6dcaf4c8e8f514717eb\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-08T11:23:29.032Z\",\n    \"updatedAt\": \"2022-06-28T02:30:42.980Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4642,7 +5830,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Nedra.Mayert48\",\n      \"email\": \"Nettie_Krajcik74@gmail.com\",\n      \"name\": \"Leah Rath\",\n      \"mobileNo\": \"1-518-542-3802\",\n      \"userType\": 1,\n      \"id\": \"6232c42c45b11e7ada9c311f\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-02-09T21:17:37.693Z\",\n      \"updatedAt\": \"2022-12-30T19:26:44.475Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Mona_Smith\",\n      \"email\": \"Kaleb67@yahoo.com\",\n      \"name\": \"Lillie Schuppe\",\n      \"mobileNo\": \"1-892-333-1668\",\n      \"userType\": 1,\n      \"id\": \"6232c6dcaf4c8e8f514717ed\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-06-08T11:23:29.032Z\",\n      \"updatedAt\": \"2022-06-28T02:30:42.980Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4668,7 +5856,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Nedra.Mayert48\",\n  \"password\": \"Kalhv8D9M5mbyrx\",\n  \"email\": \"Nettie_Krajcik74@gmail.com\",\n  \"name\": \"Leah Rath\",\n  \"mobileNo\": \"1-518-542-3802\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Mona_Smith\",\n  \"password\": \"c5EXpg28YyXqRKb\",\n  \"email\": \"Kaleb67@yahoo.com\",\n  \"name\": \"Lillie Schuppe\",\n  \"mobileNo\": \"1-892-333-1668\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -4691,7 +5879,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"userType\": 1,\n    \"id\": \"6232c42c45b11e7ada9c3117\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-09T21:17:37.693Z\",\n    \"updatedAt\": \"2022-12-30T19:26:44.475Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"userType\": 1,\n    \"id\": \"6232c6dcaf4c8e8f514717e5\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-08T11:23:29.032Z\",\n    \"updatedAt\": \"2022-06-28T02:30:42.980Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4740,7 +5928,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Nedra.Mayert48\",\n        \"email\": \"Nettie_Krajcik74@gmail.com\",\n        \"name\": \"Leah Rath\",\n        \"mobileNo\": \"1-518-542-3802\",\n        \"userType\": 1,\n        \"id\": \"6232c42c45b11e7ada9c3118\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2023-02-09T21:17:37.693Z\",\n        \"updatedAt\": \"2022-12-30T19:26:44.475Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Mona_Smith\",\n        \"email\": \"Kaleb67@yahoo.com\",\n        \"name\": \"Lillie Schuppe\",\n        \"mobileNo\": \"1-892-333-1668\",\n        \"userType\": 1,\n        \"id\": \"6232c6dcaf4c8e8f514717e6\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-06-08T11:23:29.032Z\",\n        \"updatedAt\": \"2022-06-28T02:30:42.980Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4815,7 +6003,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Nedra.Mayert48\",\n      \"password\": \"Kalhv8D9M5mbyrx\",\n      \"email\": \"Nettie_Krajcik74@gmail.com\",\n      \"name\": \"Leah Rath\",\n      \"mobileNo\": \"1-518-542-3802\",\n      \"userType\": 1\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Mona_Smith\",\n      \"password\": \"c5EXpg28YyXqRKb\",\n      \"email\": \"Kaleb67@yahoo.com\",\n      \"name\": \"Lillie Schuppe\",\n      \"mobileNo\": \"1-892-333-1668\",\n      \"userType\": 1\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -4838,7 +6026,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Nedra.Mayert48\",\n      \"email\": \"Nettie_Krajcik74@gmail.com\",\n      \"name\": \"Leah Rath\",\n      \"mobileNo\": \"1-518-542-3802\",\n      \"userType\": 1,\n      \"id\": \"6232c42c45b11e7ada9c3119\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-02-09T21:17:37.693Z\",\n      \"updatedAt\": \"2022-12-30T19:26:44.475Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Mona_Smith\",\n      \"email\": \"Kaleb67@yahoo.com\",\n      \"name\": \"Lillie Schuppe\",\n      \"mobileNo\": \"1-892-333-1668\",\n      \"userType\": 1,\n      \"id\": \"6232c6dcaf4c8e8f514717e7\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-06-08T11:23:29.032Z\",\n      \"updatedAt\": \"2022-06-28T02:30:42.980Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4985,7 +6173,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Nedra.Mayert48\",\n      \"email\": \"Nettie_Krajcik74@gmail.com\",\n      \"name\": \"Leah Rath\",\n      \"mobileNo\": \"1-518-542-3802\",\n      \"userType\": 1,\n      \"id\": \"6232c42c45b11e7ada9c311a\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-02-09T21:17:37.693Z\",\n      \"updatedAt\": \"2022-12-30T19:26:44.475Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Mona_Smith\",\n      \"email\": \"Kaleb67@yahoo.com\",\n      \"name\": \"Lillie Schuppe\",\n      \"mobileNo\": \"1-892-333-1668\",\n      \"userType\": 1,\n      \"id\": \"6232c6dcaf4c8e8f514717e8\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-06-08T11:23:29.032Z\",\n      \"updatedAt\": \"2022-06-28T02:30:42.980Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5083,7 +6271,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"userType\": 1,\n    \"id\": \"6232c42c45b11e7ada9c311b\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-09T21:17:37.693Z\",\n    \"updatedAt\": \"2022-12-30T19:26:44.475Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"userType\": 1,\n    \"id\": \"6232c6dcaf4c8e8f514717e9\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-08T11:23:29.032Z\",\n    \"updatedAt\": \"2022-06-28T02:30:42.980Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5109,7 +6297,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Nedra.Mayert48\",\n  \"password\": \"Kalhv8D9M5mbyrx\",\n  \"email\": \"Nettie_Krajcik74@gmail.com\",\n  \"name\": \"Leah Rath\",\n  \"mobileNo\": \"1-518-542-3802\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Mona_Smith\",\n  \"password\": \"c5EXpg28YyXqRKb\",\n  \"email\": \"Kaleb67@yahoo.com\",\n  \"name\": \"Lillie Schuppe\",\n  \"mobileNo\": \"1-892-333-1668\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -5132,7 +6320,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"userType\": 1,\n    \"id\": \"6232c42c45b11e7ada9c311c\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-09T21:17:37.693Z\",\n    \"updatedAt\": \"2022-12-30T19:26:44.475Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"userType\": 1,\n    \"id\": \"6232c6dcaf4c8e8f514717ea\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-08T11:23:29.032Z\",\n    \"updatedAt\": \"2022-06-28T02:30:42.980Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5158,7 +6346,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Nedra.Mayert48\",\n  \"password\": \"Kalhv8D9M5mbyrx\",\n  \"email\": \"Nettie_Krajcik74@gmail.com\",\n  \"name\": \"Leah Rath\",\n  \"mobileNo\": \"1-518-542-3802\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Mona_Smith\",\n  \"password\": \"c5EXpg28YyXqRKb\",\n  \"email\": \"Kaleb67@yahoo.com\",\n  \"name\": \"Lillie Schuppe\",\n  \"mobileNo\": \"1-892-333-1668\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -5181,7 +6369,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Nedra.Mayert48\",\n      \"email\": \"Nettie_Krajcik74@gmail.com\",\n      \"name\": \"Leah Rath\",\n      \"mobileNo\": \"1-518-542-3802\",\n      \"userType\": 1,\n      \"id\": \"6232c42c45b11e7ada9c311e\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-02-09T21:17:37.693Z\",\n      \"updatedAt\": \"2022-12-30T19:26:44.475Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Mona_Smith\",\n      \"email\": \"Kaleb67@yahoo.com\",\n      \"name\": \"Lillie Schuppe\",\n      \"mobileNo\": \"1-892-333-1668\",\n      \"userType\": 1,\n      \"id\": \"6232c6dcaf4c8e8f514717ec\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-06-08T11:23:29.032Z\",\n      \"updatedAt\": \"2022-06-28T02:30:42.980Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5280,7 +6468,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"id\": \"6232c42c45b11e7ada9c3120\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-01T17:42:49.074Z\",\n    \"updatedAt\": \"2022-09-26T02:22:55.111Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"id\": \"6232c6dcaf4c8e8f514717ee\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-22T08:09:56.803Z\",\n    \"updatedAt\": \"2022-10-06T21:19:13.358Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5306,7 +6494,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Nedra.Mayert48\",\n  \"password\": \"Kalhv8D9M5mbyrx\",\n  \"email\": \"Nettie_Krajcik74@gmail.com\",\n  \"name\": \"Leah Rath\",\n  \"mobileNo\": \"1-518-542-3802\"\n}"
+                  "raw": "{\n  \"username\": \"Mona_Smith\",\n  \"password\": \"c5EXpg28YyXqRKb\",\n  \"email\": \"Kaleb67@yahoo.com\",\n  \"name\": \"Lillie Schuppe\",\n  \"mobileNo\": \"1-892-333-1668\"\n}"
                 },
                 "description": "",
                 "auth": {}
@@ -5324,7 +6512,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Nedra.Mayert48\",\n    \"email\": \"Nettie_Krajcik74@gmail.com\",\n    \"name\": \"Leah Rath\",\n    \"mobileNo\": \"1-518-542-3802\",\n    \"id\": \"6232c42c45b11e7ada9c3120\",\n    \"loginRetryLimit\": 0,\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-01T17:42:49.074Z\",\n    \"updatedAt\": \"2022-09-26T02:22:55.111Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Mona_Smith\",\n    \"email\": \"Kaleb67@yahoo.com\",\n    \"name\": \"Lillie Schuppe\",\n    \"mobileNo\": \"1-892-333-1668\",\n    \"id\": \"6232c6dcaf4c8e8f514717ee\",\n    \"loginRetryLimit\": 0,\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-22T08:09:56.803Z\",\n    \"updatedAt\": \"2022-10-06T21:19:13.358Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",

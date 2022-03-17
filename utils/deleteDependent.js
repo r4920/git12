@@ -3,6 +3,7 @@
  * @description :: exports deleteDependent service for project.
  */
 
+let Event = require('../model/Event');
 let Blog = require('../model/Blog');
 let User = require('../model/user');
 let UserTokens = require('../model/userTokens');
@@ -11,6 +12,14 @@ let ProjectRoute = require('../model/projectRoute');
 let RouteRole = require('../model/routeRole');
 let UserRole = require('../model/userRole');
 let dbService = require('.//dbService');
+
+const deleteEvent = async (filter) =>{
+  try {
+    return await Event.deleteMany(filter);
+  } catch (error){
+    throw new Error(error.message);
+  }
+};
 
 const deleteBlog = async (filter) =>{
   try {
@@ -25,38 +34,42 @@ const deleteUser = async (filter) =>{
     let user = await User.find(filter, { _id:1 });
     if (user.length){
       user = user.map((obj) => obj._id);
-      const BlogFilter8235 = { 'updatedBy': { '$in': user } };
-      const Blog9591 = await deleteBlog(BlogFilter8235);
-      const BlogFilter4274 = { 'addedBy': { '$in': user } };
-      const Blog5793 = await deleteBlog(BlogFilter4274);
-      const userFilter8506 = { 'addedBy': { '$in': user } };
-      const user7798 = await deleteUser(userFilter8506);
-      const userFilter2026 = { 'updatedBy': { '$in': user } };
-      const user7721 = await deleteUser(userFilter2026);
-      const userTokensFilter1432 = { 'userId': { '$in': user } };
-      const userTokens7136 = await deleteUserTokens(userTokensFilter1432);
-      const userTokensFilter1208 = { 'addedBy': { '$in': user } };
-      const userTokens2455 = await deleteUserTokens(userTokensFilter1208);
-      const userTokensFilter3216 = { 'updatedBy': { '$in': user } };
-      const userTokens9779 = await deleteUserTokens(userTokensFilter3216);
-      const roleFilter6417 = { 'addedBy': { '$in': user } };
-      const role5952 = await deleteRole(roleFilter6417);
-      const roleFilter6199 = { 'updatedBy': { '$in': user } };
-      const role4966 = await deleteRole(roleFilter6199);
-      const projectRouteFilter6485 = { 'addedBy': { '$in': user } };
-      const projectRoute0708 = await deleteProjectRoute(projectRouteFilter6485);
-      const projectRouteFilter8847 = { 'updatedBy': { '$in': user } };
-      const projectRoute4540 = await deleteProjectRoute(projectRouteFilter8847);
-      const routeRoleFilter9903 = { 'addedBy': { '$in': user } };
-      const routeRole5612 = await deleteRouteRole(routeRoleFilter9903);
-      const routeRoleFilter4732 = { 'updatedBy': { '$in': user } };
-      const routeRole1170 = await deleteRouteRole(routeRoleFilter4732);
-      const userRoleFilter4729 = { 'userId': { '$in': user } };
-      const userRole3013 = await deleteUserRole(userRoleFilter4729);
-      const userRoleFilter2533 = { 'addedBy': { '$in': user } };
-      const userRole1961 = await deleteUserRole(userRoleFilter2533);
-      const userRoleFilter9669 = { 'updatedBy': { '$in': user } };
-      const userRole8570 = await deleteUserRole(userRoleFilter9669);
+      const EventFilter6865 = { 'updatedBy': { '$in': user } };
+      const Event0786 = await deleteEvent(EventFilter6865);
+      const EventFilter7841 = { 'addedBy': { '$in': user } };
+      const Event7953 = await deleteEvent(EventFilter7841);
+      const BlogFilter2167 = { 'updatedBy': { '$in': user } };
+      const Blog1708 = await deleteBlog(BlogFilter2167);
+      const BlogFilter0830 = { 'addedBy': { '$in': user } };
+      const Blog7213 = await deleteBlog(BlogFilter0830);
+      const userFilter9578 = { 'addedBy': { '$in': user } };
+      const user7433 = await deleteUser(userFilter9578);
+      const userFilter8056 = { 'updatedBy': { '$in': user } };
+      const user7900 = await deleteUser(userFilter8056);
+      const userTokensFilter8663 = { 'userId': { '$in': user } };
+      const userTokens2282 = await deleteUserTokens(userTokensFilter8663);
+      const userTokensFilter2024 = { 'addedBy': { '$in': user } };
+      const userTokens3969 = await deleteUserTokens(userTokensFilter2024);
+      const userTokensFilter0654 = { 'updatedBy': { '$in': user } };
+      const userTokens8959 = await deleteUserTokens(userTokensFilter0654);
+      const roleFilter1108 = { 'addedBy': { '$in': user } };
+      const role2777 = await deleteRole(roleFilter1108);
+      const roleFilter3172 = { 'updatedBy': { '$in': user } };
+      const role6252 = await deleteRole(roleFilter3172);
+      const projectRouteFilter5225 = { 'addedBy': { '$in': user } };
+      const projectRoute6389 = await deleteProjectRoute(projectRouteFilter5225);
+      const projectRouteFilter4723 = { 'updatedBy': { '$in': user } };
+      const projectRoute1789 = await deleteProjectRoute(projectRouteFilter4723);
+      const routeRoleFilter8805 = { 'addedBy': { '$in': user } };
+      const routeRole5180 = await deleteRouteRole(routeRoleFilter8805);
+      const routeRoleFilter1340 = { 'updatedBy': { '$in': user } };
+      const routeRole7826 = await deleteRouteRole(routeRoleFilter1340);
+      const userRoleFilter4518 = { 'userId': { '$in': user } };
+      const userRole9657 = await deleteUserRole(userRoleFilter4518);
+      const userRoleFilter8789 = { 'addedBy': { '$in': user } };
+      const userRole9772 = await deleteUserRole(userRoleFilter8789);
+      const userRoleFilter1935 = { 'updatedBy': { '$in': user } };
+      const userRole6307 = await deleteUserRole(userRoleFilter1935);
       return await User.deleteMany(filter);
     } else {
       return 'No user found.';
@@ -79,10 +92,10 @@ const deleteRole = async (filter) =>{
     let role = await Role.find(filter, { _id:1 });
     if (role.length){
       role = role.map((obj) => obj._id);
-      const routeRoleFilter8549 = { 'roleId': { '$in': role } };
-      const routeRole3826 = await deleteRouteRole(routeRoleFilter8549);
-      const userRoleFilter9774 = { 'roleId': { '$in': role } };
-      const userRole5576 = await deleteUserRole(userRoleFilter9774);
+      const routeRoleFilter5166 = { 'roleId': { '$in': role } };
+      const routeRole8138 = await deleteRouteRole(routeRoleFilter5166);
+      const userRoleFilter7890 = { 'roleId': { '$in': role } };
+      const userRole4645 = await deleteUserRole(userRoleFilter7890);
       return await Role.deleteMany(filter);
     } else {
       return 'No role found.';
@@ -97,8 +110,8 @@ const deleteProjectRoute = async (filter) =>{
     let projectroute = await ProjectRoute.find(filter, { _id:1 });
     if (projectroute.length){
       projectroute = projectroute.map((obj) => obj._id);
-      const routeRoleFilter6840 = { 'routeId': { '$in': projectroute } };
-      const routeRole5721 = await deleteRouteRole(routeRoleFilter6840);
+      const routeRoleFilter4431 = { 'routeId': { '$in': projectroute } };
+      const routeRole0336 = await deleteRouteRole(routeRoleFilter4431);
       return await ProjectRoute.deleteMany(filter);
     } else {
       return 'No projectRoute found.';
@@ -124,6 +137,16 @@ const deleteUserRole = async (filter) =>{
   }
 };
 
+const countEvent = async (filter) =>{
+  try {
+        
+    const EventCnt =  await Event.countDocuments(filter);
+    return { Event : EventCnt };
+  } catch (error){
+    throw new Error(error.message);
+  }
+};
+
 const countBlog = async (filter) =>{
   try {
         
@@ -140,6 +163,9 @@ const countUser = async (filter) =>{
     let user = await User.find(filter, { _id:1 });
     if (user.length){
       user = user.map((obj) => obj._id);
+
+      const EventFilter = { '$or': [{                    updatedBy : { '$in' : user } },{                    addedBy : { '$in' : user } }] };
+      const EventCnt =  await dbService.countDocument(Event,EventFilter);
 
       const BlogFilter = { '$or': [{                    updatedBy : { '$in' : user } },{                    addedBy : { '$in' : user } }] };
       const BlogCnt =  await dbService.countDocument(Blog,BlogFilter);
@@ -163,6 +189,7 @@ const countUser = async (filter) =>{
       const userRoleCnt =  await dbService.countDocument(UserRole,userRoleFilter);
 
       let response = {
+        Event : EventCnt,
         Blog : BlogCnt,
         user : userCnt,
         userTokens : userTokensCnt,
@@ -256,6 +283,17 @@ const countUserRole = async (filter) =>{
   }
 };
 
+const softDeleteEvent = async (filter,updateBody, defaultValues = {}) =>{
+  try {
+    return await Event.updateMany(filter, {
+      ...defaultValues,
+      ...updateBody
+    });
+  } catch (error){
+    throw new Error(error.message);
+  }
+};
+
 const softDeleteBlog = async (filter,updateBody, defaultValues = {}) =>{
   try {
     return await Blog.updateMany(filter, {
@@ -272,38 +310,42 @@ const softDeleteUser = async (filter,updateBody, defaultValues = {}) =>{
     let user = await User.find(filter, { _id:1 });
     if (user.length){
       user = user.map((obj) => obj._id);
-      const BlogFilter3213 = { 'updatedBy': { '$in': user } };
-      const Blog2781 = await softDeleteBlog(BlogFilter3213, updateBody);
-      const BlogFilter6613 = { 'addedBy': { '$in': user } };
-      const Blog2587 = await softDeleteBlog(BlogFilter6613, updateBody);
-      const userFilter1603 = { 'addedBy': { '$in': user } };
-      const user9367 = await softDeleteUser(userFilter1603, updateBody);
-      const userFilter9080 = { 'updatedBy': { '$in': user } };
-      const user6073 = await softDeleteUser(userFilter9080, updateBody);
-      const userTokensFilter3930 = { 'userId': { '$in': user } };
-      const userTokens7415 = await softDeleteUserTokens(userTokensFilter3930, updateBody);
-      const userTokensFilter0128 = { 'addedBy': { '$in': user } };
-      const userTokens6990 = await softDeleteUserTokens(userTokensFilter0128, updateBody);
-      const userTokensFilter6107 = { 'updatedBy': { '$in': user } };
-      const userTokens3868 = await softDeleteUserTokens(userTokensFilter6107, updateBody);
-      const roleFilter5726 = { 'addedBy': { '$in': user } };
-      const role0984 = await softDeleteRole(roleFilter5726, updateBody);
-      const roleFilter2477 = { 'updatedBy': { '$in': user } };
-      const role1365 = await softDeleteRole(roleFilter2477, updateBody);
-      const projectRouteFilter3094 = { 'addedBy': { '$in': user } };
-      const projectRoute5979 = await softDeleteProjectRoute(projectRouteFilter3094, updateBody);
-      const projectRouteFilter8886 = { 'updatedBy': { '$in': user } };
-      const projectRoute0134 = await softDeleteProjectRoute(projectRouteFilter8886, updateBody);
-      const routeRoleFilter9869 = { 'addedBy': { '$in': user } };
-      const routeRole4172 = await softDeleteRouteRole(routeRoleFilter9869, updateBody);
-      const routeRoleFilter2618 = { 'updatedBy': { '$in': user } };
-      const routeRole8485 = await softDeleteRouteRole(routeRoleFilter2618, updateBody);
-      const userRoleFilter2371 = { 'userId': { '$in': user } };
-      const userRole4779 = await softDeleteUserRole(userRoleFilter2371, updateBody);
-      const userRoleFilter7910 = { 'addedBy': { '$in': user } };
-      const userRole6043 = await softDeleteUserRole(userRoleFilter7910, updateBody);
-      const userRoleFilter5304 = { 'updatedBy': { '$in': user } };
-      const userRole2626 = await softDeleteUserRole(userRoleFilter5304, updateBody);
+      const EventFilter9460 = { 'updatedBy': { '$in': user } };
+      const Event4216 = await softDeleteEvent(EventFilter9460, updateBody);
+      const EventFilter6408 = { 'addedBy': { '$in': user } };
+      const Event2911 = await softDeleteEvent(EventFilter6408, updateBody);
+      const BlogFilter4921 = { 'updatedBy': { '$in': user } };
+      const Blog0757 = await softDeleteBlog(BlogFilter4921, updateBody);
+      const BlogFilter7954 = { 'addedBy': { '$in': user } };
+      const Blog8148 = await softDeleteBlog(BlogFilter7954, updateBody);
+      const userFilter0240 = { 'addedBy': { '$in': user } };
+      const user9761 = await softDeleteUser(userFilter0240, updateBody);
+      const userFilter0609 = { 'updatedBy': { '$in': user } };
+      const user7642 = await softDeleteUser(userFilter0609, updateBody);
+      const userTokensFilter7568 = { 'userId': { '$in': user } };
+      const userTokens3397 = await softDeleteUserTokens(userTokensFilter7568, updateBody);
+      const userTokensFilter7544 = { 'addedBy': { '$in': user } };
+      const userTokens4195 = await softDeleteUserTokens(userTokensFilter7544, updateBody);
+      const userTokensFilter1348 = { 'updatedBy': { '$in': user } };
+      const userTokens5997 = await softDeleteUserTokens(userTokensFilter1348, updateBody);
+      const roleFilter3354 = { 'addedBy': { '$in': user } };
+      const role8133 = await softDeleteRole(roleFilter3354, updateBody);
+      const roleFilter6999 = { 'updatedBy': { '$in': user } };
+      const role4093 = await softDeleteRole(roleFilter6999, updateBody);
+      const projectRouteFilter9127 = { 'addedBy': { '$in': user } };
+      const projectRoute2657 = await softDeleteProjectRoute(projectRouteFilter9127, updateBody);
+      const projectRouteFilter7146 = { 'updatedBy': { '$in': user } };
+      const projectRoute8404 = await softDeleteProjectRoute(projectRouteFilter7146, updateBody);
+      const routeRoleFilter3071 = { 'addedBy': { '$in': user } };
+      const routeRole3123 = await softDeleteRouteRole(routeRoleFilter3071, updateBody);
+      const routeRoleFilter3031 = { 'updatedBy': { '$in': user } };
+      const routeRole3853 = await softDeleteRouteRole(routeRoleFilter3031, updateBody);
+      const userRoleFilter7386 = { 'userId': { '$in': user } };
+      const userRole1091 = await softDeleteUserRole(userRoleFilter7386, updateBody);
+      const userRoleFilter2355 = { 'addedBy': { '$in': user } };
+      const userRole9728 = await softDeleteUserRole(userRoleFilter2355, updateBody);
+      const userRoleFilter0678 = { 'updatedBy': { '$in': user } };
+      const userRole7240 = await softDeleteUserRole(userRoleFilter0678, updateBody);
       return await User.updateMany(filter, {
         ...defaultValues,
         ...updateBody
@@ -332,10 +374,10 @@ const softDeleteRole = async (filter,updateBody, defaultValues = {}) =>{
     let role = await Role.find(filter, { _id:1 });
     if (role.length){
       role = role.map((obj) => obj._id);
-      const routeRoleFilter9823 = { 'roleId': { '$in': role } };
-      const routeRole5635 = await softDeleteRouteRole(routeRoleFilter9823, updateBody);
-      const userRoleFilter7126 = { 'roleId': { '$in': role } };
-      const userRole9846 = await softDeleteUserRole(userRoleFilter7126, updateBody);
+      const routeRoleFilter1395 = { 'roleId': { '$in': role } };
+      const routeRole3548 = await softDeleteRouteRole(routeRoleFilter1395, updateBody);
+      const userRoleFilter2416 = { 'roleId': { '$in': role } };
+      const userRole8833 = await softDeleteUserRole(userRoleFilter2416, updateBody);
       return await Role.updateMany(filter, {
         ...defaultValues,
         ...updateBody
@@ -353,8 +395,8 @@ const softDeleteProjectRoute = async (filter,updateBody, defaultValues = {}) =>{
     let projectroute = await ProjectRoute.find(filter, { _id:1 });
     if (projectroute.length){
       projectroute = projectroute.map((obj) => obj._id);
-      const routeRoleFilter5031 = { 'routeId': { '$in': projectroute } };
-      const routeRole5354 = await softDeleteRouteRole(routeRoleFilter5031, updateBody);
+      const routeRoleFilter4251 = { 'routeId': { '$in': projectroute } };
+      const routeRole8434 = await softDeleteRouteRole(routeRoleFilter4251, updateBody);
       return await ProjectRoute.updateMany(filter, {
         ...defaultValues,
         ...updateBody
@@ -390,6 +432,7 @@ const softDeleteUserRole = async (filter,updateBody, defaultValues = {}) =>{
 };
 
 module.exports = {
+  deleteEvent,
   deleteBlog,
   deleteUser,
   deleteUserTokens,
@@ -397,6 +440,7 @@ module.exports = {
   deleteProjectRoute,
   deleteRouteRole,
   deleteUserRole,
+  countEvent,
   countBlog,
   countUser,
   countUserTokens,
@@ -404,6 +448,7 @@ module.exports = {
   countProjectRoute,
   countRouteRole,
   countUserRole,
+  softDeleteEvent,
   softDeleteBlog,
   softDeleteUser,
   softDeleteUserTokens,
